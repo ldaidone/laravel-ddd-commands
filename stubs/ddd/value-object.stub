@@ -1,0 +1,19 @@
+<?php
+
+namespace {{ namespace }};
+
+class {{ class }}
+{
+    /**
+     * Value Objects must be immutable and validated on creation.
+     */
+
+    public function __construct(
+        // Example:
+        // private string $email,
+    ) {
+        // Add internal validation if needed.
+    }
+
+    // Example: public function value(): string { return $this->email; }
+}
