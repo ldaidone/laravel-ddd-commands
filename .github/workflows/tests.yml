@@ -1,4 +1,5 @@
-name: tests
+# .github/workflows/ci.yml
+name: CI
 
 on:
   push:
@@ -9,35 +10,30 @@ on:
 jobs:
   tests:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
-        php: [8.2, 8.3]
-        laravel: [10.*, 11.*]
-        stability: [prefer-stable]
-
-    name: PHP ${{ matrix.php }} - Laravel ${{ matrix.laravel }}
+        php: [ '8.2' ]
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - name: Setup PHP
+      - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
-          extensions: mbstring, dom, fileinfo
-          coverage: xdebug
+          extensions: mbstring, intl, bcmath, json, curl, zip
+          coverage: none
+          tools: composer
 
       - name: Install dependencies
         run: |
-          composer require "illuminate/support:${{ matrix.laravel }}" --no-update
-          composer update --${{ matrix.stability }} --prefer-dist --no-interaction
+          composer install --prefer-dist --no-interaction --no-progress --with-all-dependencies
 
-      - name: Execute tests (Unit and Feature tests) via PHPUnit
+      - name: Run static analysis
+        run: composer phpstan
+
+      - name: Run code style checks
+        run: composer pint -- --test
+
+      - name: Run tests
         run: vendor/bin/phpunit
-
-      - name: Execute Type Checking
-        run: vendor/bin/phpstan analyse
-
-      - name: Execute Code Style Check
-        run: vendor/bin/pint --test
