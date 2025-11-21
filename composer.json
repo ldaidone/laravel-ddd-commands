@@ -57,5 +57,10 @@
         "test": "vendor/bin/phpunit",
         "lint": "vendor/bin/pint",
         "analyse": "vendor/bin/phpstan analyse"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/audit": true
+        }
     }
 }
