@@ -44,16 +44,4 @@ class LaravelDddCommandsServiceProvider extends ServiceProvider
             // add more as needed
         ]);
     }
-    /*
-     * @TODO
-     * 1. Write tests
-     * 2. Build domain folder validator
-     * 3. Refactor BaseGenerator
-     * 4. Add config file + stub publishing
-     * 5. Add Aggregate generator
-     * 6. Add CI pipeline
-     * 7. Improve README
-     * 8. Tag v0.1.0
-     *
-     */
 }
