@@ -4,7 +4,7 @@ namespace Ldaidone\LaravelDddCommands\Generators;
 
 use Illuminate\Support\Str;
 
-class ValueObjectGenerator extends BaseGenerator
+class CommandGenerator extends BaseGenerator
 {
     protected string $namespace;
 
@@ -24,11 +24,11 @@ class ValueObjectGenerator extends BaseGenerator
 
         $this->domain = Str::studly($parts[0]);
         $this->entity = Str::studly(end($parts));
-        $this->namespace = $this->rootNamespace.'\\'.$this->domain.'\\ValueObjects';
+        $this->namespace = $this->rootNamespace.'\\'.$this->domain.'\\Commands';
 
-        $this->path = base_path($this->getDomainPath()."/{$this->domain}/ValueObjects/{$this->entity}.php");
+        $this->path = base_path($this->getDomainPath()."/{$this->domain}/Commands/{$this->entity}.php");
         $this->class = $this->entity;
-        $this->type = 'value-object';
+        $this->type = 'command';
 
         parent::__construct($this->path, $this->type);
     }
@@ -41,12 +41,12 @@ class ValueObjectGenerator extends BaseGenerator
         ];
     }
 
-    public function getValueObjectPath(): string
+    public function getCommandPath(): string
     {
         return $this->path ?? '';
     }
 
-    public function createValueObjectIfStubExists(): void
+    public function createCommandIfStubExists(): void
     {
         $replacements = [
             $this->namespace,

@@ -33,5 +33,11 @@ jobs:
           composer require "illuminate/support:${{ matrix.laravel }}" --no-update
           composer update --${{ matrix.stability }} --prefer-dist --no-interaction
 
-      - name: Run Tests
-        run: composer test
+      - name: Execute tests (Unit and Feature tests) via PHPUnit
+        run: vendor/bin/phpunit
+
+      - name: Execute Type Checking
+        run: vendor/bin/phpstan analyse
+
+      - name: Execute Code Style Check
+        run: vendor/bin/pint --test

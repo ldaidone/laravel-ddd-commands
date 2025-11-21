@@ -3,10 +3,10 @@
 namespace Ldaidone\LaravelDddCommands\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Ldaidone\LaravelDddCommands\Commands\Concerns\ExposesSignature;
 use Ldaidone\LaravelDddCommands\Generators\DomainGenerator;
+use Ldaidone\LaravelDddCommands\Support\DomainAutoFixer;
 
 class CreateDomainCommand extends Command
 {
@@ -23,17 +23,29 @@ class CreateDomainCommand extends Command
     {
         $name = Str::studly($this->argument('name'));
 
+        $domain = $this->extractDomain($name);
+
         $generator = new DomainGenerator($name);
 
         if ($generator->exists()) {
             $this->error("Domain '{$name}' already exists.");
-            return Command::FAILURE;
+
+            return self::FAILURE;
         }
+
+        $autoFixer = new DomainAutoFixer($domain);
+        $autoFixer->ensureDomainStructure();
 
         $generator->createDirectories();
         $generator->createReadmeIfStubExists();
 
         $this->info("Domain '{$name}' created successfully.");
+
         return Command::SUCCESS;
+    }
+
+    protected function extractDomain(string $name): string
+    {
+        return explode('/', $name)[0];
     }
 }

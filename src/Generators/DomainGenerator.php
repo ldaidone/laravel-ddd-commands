@@ -8,12 +8,15 @@ use Illuminate\Support\Str;
 class DomainGenerator
 {
     protected string $name;
+
     protected string $domainPath;
 
     public function __construct(string $name)
     {
         $this->name = Str::studly($name);
-        $this->domainPath = app_path("Domain/{$this->name}");
+        // Use the helper from BaseGenerator (which reads config)
+        // We need to ensure we use the base path relative to project root
+        $this->domainPath = base_path($this->getDomainPath()."/{$this->name}");
     }
 
     public function exists(): bool
@@ -23,16 +26,21 @@ class DomainGenerator
 
     public function createDirectories(): void
     {
+        if (! File::exists($this->domainPath)) {
+            File::makeDirectory($this->domainPath, 0777, true);
+        }
         foreach ($this->folders() as $folder) {
             $path = "{$this->domainPath}/{$folder}";
-            File::makeDirectory($path, 0755, true);
+            if (! File::exists($path)) {
+                File::makeDirectory($path, 0755, true);
+            }
             File::put("{$path}/.gitkeep", '');
         }
     }
 
     public function createReadmeIfStubExists(): void
     {
-        $stubPath = __DIR__ . '/../../stubs/domain-readme.stub';
+        $stubPath = __DIR__.'/../../stubs/ddd/domain-readme.stub';
 
         if (! File::exists($stubPath)) {
             return;
@@ -58,5 +66,10 @@ class DomainGenerator
             'Repositories',
             'Events',
         ];
+    }
+
+    protected function getDomainPath(): string
+    {
+        return config('ddd-commands.domain_path', 'app/Domain');
     }
 }

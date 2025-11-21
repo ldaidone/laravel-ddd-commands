@@ -2,7 +2,4 @@
 
 namespace Ldaidone\LaravelDddCommands\Exceptions;
 
-class RepositoryEloquentAlreadyExistsException extends \Exception
-{
-
-}
+class RepositoryEloquentAlreadyExistsException extends \Exception {}

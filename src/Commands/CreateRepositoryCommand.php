@@ -9,12 +9,14 @@ use Ldaidone\LaravelDddCommands\Exceptions\RepositoryEloquentAlreadyExistsExcept
 use Ldaidone\LaravelDddCommands\Exceptions\RepositoryInterfaceAlreadyExistsException;
 use Ldaidone\LaravelDddCommands\Generators\RepositoryEloquentGenerator;
 use Ldaidone\LaravelDddCommands\Generators\RepositoryInterfaceGenerator;
+use Ldaidone\LaravelDddCommands\Support\DomainAutoFixer;
 
 class CreateRepositoryCommand extends Command
 {
     use ExposesSignature;
 
     protected $signature = 'ddd:create-repository {name}';
+
     protected $description = 'Create a new DDD repository (interface + eloquent)';
 
     public function handle()
@@ -25,7 +27,7 @@ class CreateRepositoryCommand extends Command
             $interfacePath = $this->generateInterface($name);
             $this->info("Repository Interface created: {$interfacePath}");
 
-            $eloquentPath  = $this->generateEloquent($name);
+            $eloquentPath = $this->generateEloquent($name);
             $this->info("Repository Eloquent created: {$eloquentPath}");
 
             return Command::SUCCESS;
@@ -33,11 +35,13 @@ class CreateRepositoryCommand extends Command
         } catch (RepositoryInterfaceAlreadyExistsException $e) {
 
             $this->error($e->getMessage());
+
             return Command::FAILURE;
 
         } catch (RepositoryEloquentAlreadyExistsException $e) {
 
             $this->error($e->getMessage());
+
             return Command::FAILURE;
         }
     }
@@ -46,7 +50,7 @@ class CreateRepositoryCommand extends Command
     {
         $generator = new RepositoryInterfaceGenerator($name);
 
-        if ($generator->exists($generator->getRepositoryInterfacePath())) {
+        if ($generator->exists()) {
             throw new RepositoryInterfaceAlreadyExistsException(
                 "Interface already exists: {$generator->getRepositoryInterfacePath()}"
             );
@@ -60,11 +64,16 @@ class CreateRepositoryCommand extends Command
     private function generateEloquent(string $name): string
     {
         // FIX: pass interface name explicitly
-        $interfaceName = Str::studly($name) . 'RepositoryInterface';
+        $interfaceName = Str::studly($name).'RepositoryInterface';
+
+        $domain = $this->extractDomain($name);
+
+        $autoFixer = new DomainAutoFixer($domain);
+        $autoFixer->ensureDomainStructure();
 
         $generator = new RepositoryEloquentGenerator($name, $interfaceName);
 
-        if ($generator->exists($generator->getRepositoryEloquentPath())) {
+        if ($generator->exists()) {
             throw new RepositoryEloquentAlreadyExistsException(
                 "Eloquent Repository already exists: {$generator->getRepositoryEloquentPath()}"
             );
@@ -73,5 +82,10 @@ class CreateRepositoryCommand extends Command
         $generator->createRepositoryEloquentIfStubExists();
 
         return $generator->getRepositoryEloquentPath();
+    }
+
+    protected function extractDomain(string $name): string
+    {
+        return explode('/', $name)[0];
     }
 }

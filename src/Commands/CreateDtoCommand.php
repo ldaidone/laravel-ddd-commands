@@ -5,16 +5,16 @@ namespace Ldaidone\LaravelDddCommands\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
 use Ldaidone\LaravelDddCommands\Commands\Concerns\ExposesSignature;
-use Ldaidone\LaravelDddCommands\Generators\ValueObjectGenerator;
+use Ldaidone\LaravelDddCommands\Generators\DtoGenerator;
 use Ldaidone\LaravelDddCommands\Support\DomainAutoFixer;
 
-class CreateValueObjectCommand extends Command
+class CreateDtoCommand extends Command
 {
     use ExposesSignature;
 
-    protected $signature = 'ddd:create-value-object {name} {--debug}';
+    protected $signature = 'ddd:create-dto {name} {--debug}';
 
-    protected $description = 'Create a new DDD valueObject class';
+    protected $description = 'Create a new DDD Data Transfer Object';
 
     public function handle()
     {
@@ -25,17 +25,17 @@ class CreateValueObjectCommand extends Command
         $autoFixer = new DomainAutoFixer($domain);
         $autoFixer->ensureDomainStructure();
 
-        $generator = new ValueObjectGenerator($name);
+        $generator = new DtoGenerator($name);
 
         if ($generator->exists()) {
-            $this->error("Entity '{$generator->getValueObjectPath()}' already exists.");
+            $this->error("DTO '{$generator->getDtoPath()}' already exists.");
 
             return Command::FAILURE;
         }
 
-        $generator->createValueObjectIfStubExists();
+        $generator->createDtoIfStubExists();
 
-        $this->info("Entity '{$generator->getValueObjectPath()}' created successfully.");
+        $this->info("DTO '{$generator->getDtoPath()}' created successfully.");
 
         return Command::SUCCESS;
     }

@@ -3,9 +3,9 @@
 namespace Tests\Unit;
 
 use Ldaidone\LaravelDddCommands\Generators\EntityGenerator;
-use PHPUnit\Framework\TestCase;
+use Tests\GeneratorTestCase;
 
-class EntityGeneratorTest extends TestCase
+class EntityGeneratorTest extends GeneratorTestCase
 {
     public function test_constructor_sets_properties_correctly(): void
     {

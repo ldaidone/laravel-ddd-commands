@@ -3,9 +3,9 @@
 namespace Tests\Unit;
 
 use Ldaidone\LaravelDddCommands\Generators\ValueObjectGenerator;
-use PHPUnit\Framework\TestCase;
+use Tests\GeneratorTestCase;
 
-class ValueObjectGeneratorTest extends TestCase
+class ValueObjectGeneratorTest extends GeneratorTestCase
 {
     public function test_constructor_sets_properties_correctly(): void
     {

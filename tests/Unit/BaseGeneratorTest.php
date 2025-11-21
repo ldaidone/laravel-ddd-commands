@@ -3,9 +3,9 @@
 namespace Tests\Unit;
 
 use Ldaidone\LaravelDddCommands\Generators\BaseGenerator;
-use PHPUnit\Framework\TestCase;
+use Tests\GeneratorTestCase;
 
-class BaseGeneratorTest extends TestCase
+class BaseGeneratorTest extends GeneratorTestCase
 {
     public function test_constructor_sets_properties_correctly(): void
     {
@@ -22,6 +22,6 @@ class BaseGeneratorTest extends TestCase
         $stubPathProperty->setAccessible(true);
 
         $this->assertEquals('test', $typeProperty->getValue($generator));
-        $this->assertStringEndsWith('stubs/test.stub', $stubPathProperty->getValue($generator));
+        $this->assertStringEndsWith('stubs/ddd/test.stub', $stubPathProperty->getValue($generator));
     }
 }

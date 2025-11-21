@@ -3,9 +3,9 @@
 namespace Tests\Unit;
 
 use Ldaidone\LaravelDddCommands\Generators\UseCaseGenerator;
-use PHPUnit\Framework\TestCase;
+use Tests\GeneratorTestCase;
 
-class UseCaseGeneratorTest extends TestCase
+class UseCaseGeneratorTest extends GeneratorTestCase
 {
     public function test_constructor_sets_properties_correctly(): void
     {

@@ -8,13 +8,22 @@ class LaravelDddCommandsServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        // If you need bindings, config merges, singletons, etc.
+        $this->mergeConfigFrom(
+            __DIR__.'/../config/ddd-commands.php', 'ddd-commands'
+        );
     }
 
     public function boot()
     {
         if ($this->app->runningInConsole()) {
             $this->registerCommands();
+            $this->publishes([
+                __DIR__.'/../config/ddd-commands.php' => config_path('ddd-commands.php'),
+            ], 'ddd-commands-config');
+
+            $this->publishes([
+                __DIR__.'/../stubs/ddd' => resource_path('stubs/ddd-commands'),
+            ], 'ddd-commands-stubs');
         }
     }
 
@@ -28,6 +37,10 @@ class LaravelDddCommandsServiceProvider extends ServiceProvider
             Commands\CreateRepositoryCommand::class,
             Commands\CreateEventCommand::class,
             Commands\CreateAggregateCommand::class,
+            Commands\CreateDtoCommand::class,
+            Commands\CreateActionCommand::class,
+            Commands\CreateCommandCommand::class,
+            Commands\CreateQueryCommand::class,
             // add more as needed
         ]);
     }

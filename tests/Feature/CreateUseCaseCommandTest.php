@@ -9,9 +9,9 @@ class CreateUseCaseCommandTest extends TestCase
 {
     public function test_command_signature_and_description(): void
     {
-        $command = new CreateUseCaseCommand();
+        $command = new CreateUseCaseCommand;
 
-        $this->assertStringContainsString('ddd:create-usecase', $command->getSignature());
+        $this->assertStringContainsString('ddd:create-use-case', $command->getSignature());
         $this->assertStringContainsString('Create a new DDD UseCase structure', $command->getDescription());
     }
 }

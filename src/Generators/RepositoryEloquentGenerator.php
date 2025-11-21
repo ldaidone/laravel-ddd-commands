@@ -7,10 +7,15 @@ use Illuminate\Support\Str;
 class RepositoryEloquentGenerator extends BaseGenerator
 {
     protected string $namespace;
+
     protected string $rootNamespace;
+
     protected string $domain;
+
     protected string $entity;
+
     protected string $class;
+
     protected string $interface;
 
     public function __construct(string $name, string $interface)
@@ -22,16 +27,18 @@ class RepositoryEloquentGenerator extends BaseGenerator
         $this->domain = Str::studly($parts[0]);
         $this->entity = Str::studly(end($parts));
 
-        $this->class     = $this->entity . 'EloquentRepository';
+        $this->class = $this->entity.'EloquentRepository';
         $this->interface = Str::studly($interface);
 
-        // FIXED — proper namespace
-        $this->namespace = "{$this->rootNamespace}\\Domain\\{$this->domain}\\Repositories";
+        // Use configured infrastructure namespace
+        $this->namespace = $this->getInfrastructureNamespace()."\\Database\\{$this->domain}\\Repositories";
 
-        // FIXED — path should be Infrastructure layer
-        $this->path = app_path("Infrastructure/Database/{$this->domain}/Repositories/{$this->class}.php");
+        // Use configured infrastructure path
+        $this->path = base_path($this->getInfrastructurePath()."/Database/{$this->domain}/Repositories/{$this->class}.php");
 
-        $this->type = "repository-eloquent";
+        $this->type = 'repository-eloquent';
+
+        parent::__construct($this->path, $this->type);
     }
 
     protected function getTags(): array

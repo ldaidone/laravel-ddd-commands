@@ -3,9 +3,9 @@
 namespace Tests\Unit;
 
 use Ldaidone\LaravelDddCommands\Generators\DomainGenerator;
-use PHPUnit\Framework\TestCase;
+use Tests\GeneratorTestCase;
 
-class DomainGeneratorTest extends TestCase
+class DomainGeneratorTest extends GeneratorTestCase
 {
     public function test_constructor_sets_name_and_path(): void
     {
@@ -25,7 +25,7 @@ class DomainGeneratorTest extends TestCase
         $domainPathProperty = $reflection->getProperty('domainPath');
         $domainPathProperty->setAccessible(true);
 
-        $expectedPath = app_path("Domain/TestDomain");
+        $expectedPath = app_path('Domain/TestDomain');
         $this->assertStringContainsString('Domain/TestDomain', $domainPathProperty->getValue($generator));
     }
 }

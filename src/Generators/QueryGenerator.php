@@ -4,7 +4,7 @@ namespace Ldaidone\LaravelDddCommands\Generators;
 
 use Illuminate\Support\Str;
 
-class ValueObjectGenerator extends BaseGenerator
+class QueryGenerator extends BaseGenerator
 {
     protected string $namespace;
 
@@ -24,11 +24,11 @@ class ValueObjectGenerator extends BaseGenerator
 
         $this->domain = Str::studly($parts[0]);
         $this->entity = Str::studly(end($parts));
-        $this->namespace = $this->rootNamespace.'\\'.$this->domain.'\\ValueObjects';
+        $this->namespace = $this->rootNamespace.'\\'.$this->domain.'\\Queries';
 
-        $this->path = base_path($this->getDomainPath()."/{$this->domain}/ValueObjects/{$this->entity}.php");
+        $this->path = base_path($this->getDomainPath()."/{$this->domain}/Queries/{$this->entity}.php");
         $this->class = $this->entity;
-        $this->type = 'value-object';
+        $this->type = 'query';
 
         parent::__construct($this->path, $this->type);
     }
@@ -41,12 +41,12 @@ class ValueObjectGenerator extends BaseGenerator
         ];
     }
 
-    public function getValueObjectPath(): string
+    public function getQueryPath(): string
     {
         return $this->path ?? '';
     }
 
-    public function createValueObjectIfStubExists(): void
+    public function createQueryIfStubExists(): void
     {
         $replacements = [
             $this->namespace,
