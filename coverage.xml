@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1763762528">
-  <project timestamp="1763762528">
+<coverage generated="1763767885">
+  <project timestamp="1763767885">
     <file name="/home/leodaido/projects/laravel-ddd-commands/src/Commands/Concerns/ExposesSignature.php">
       <class name="Ldaidone\LaravelDddCommands\Commands\Concerns\ExposesSignature" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="1" elements="4" coveredelements="2"/>
@@ -708,7 +708,7 @@
       <line num="43" type="stmt" count="18"/>
       <line num="44" type="stmt" count="18"/>
       <line num="45" type="stmt" count="18"/>
-      <metrics loc="60" ncloc="48" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="25" elements="28" coveredelements="28"/>
+      <metrics loc="48" ncloc="48" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="25" elements="28" coveredelements="28"/>
     </file>
     <file name="/home/leodaido/projects/laravel-ddd-commands/src/Support/DomainAutoFixer.php">
       <class name="Ldaidone\LaravelDddCommands\Support\DomainAutoFixer" namespace="global">
@@ -777,6 +777,6 @@
       <line num="97" type="stmt" count="0"/>
       <metrics loc="100" ncloc="99" classes="1" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="38" coveredstatements="0" elements="44" coveredelements="0"/>
     </file>
-    <metrics files="30" loc="1631" ncloc="1604" classes="28" methods="96" coveredmethods="61" conditionals="0" coveredconditionals="0" statements="500" coveredstatements="366" elements="596" coveredelements="427"/>
+    <metrics files="30" loc="1619" ncloc="1604" classes="28" methods="96" coveredmethods="61" conditionals="0" coveredconditionals="0" statements="500" coveredstatements="366" elements="596" coveredelements="427"/>
   </project>
 </coverage>

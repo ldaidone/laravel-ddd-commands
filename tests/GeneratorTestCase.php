@@ -5,7 +5,7 @@ namespace Tests;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\File;
 use Ldaidone\LaravelDddCommands\LaravelDddCommandsServiceProvider;
-use Orchestra\Testbench\TestCase;
+use PHPUnit\Framework\TestCase;
 
 abstract class GeneratorTestCase extends TestCase
 {
@@ -19,6 +19,10 @@ abstract class GeneratorTestCase extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
+
+        // Boot a minimal Laravel app for facades/config
+        $app = require __DIR__.'/../bootstrap/app.php';
+        $app->make(Illuminate\Contracts\Console\Kernel::class)->bootstrap();
 
         // Mock File facade to avoid actual file creation during tests
         // OR use a temporary directory
