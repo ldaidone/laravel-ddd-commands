@@ -5,10 +5,12 @@ namespace Tests;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\File;
 use Ldaidone\LaravelDddCommands\LaravelDddCommandsServiceProvider;
-use PHPUnit\Framework\TestCase;
+use Orchestra\Testbench\TestCase;
+use Illuminate\Contracts\Console\Kernel as ConsoleKernel;
 
 abstract class GeneratorTestCase extends TestCase
 {
+
     protected function getPackageProviders($app)
     {
         return [
@@ -20,12 +22,7 @@ abstract class GeneratorTestCase extends TestCase
     {
         parent::setUp();
 
-        // Boot a minimal Laravel app for facades/config
-        $app = require __DIR__.'/../bootstrap/app.php';
-        $app->make(Illuminate\Contracts\Console\Kernel::class)->bootstrap();
-
-        // Mock File facade to avoid actual file creation during tests
-        // OR use a temporary directory
+        // Prepare temporary directory for generated files
         $this->prepareTempDir();
     }
 
@@ -43,7 +40,7 @@ abstract class GeneratorTestCase extends TestCase
         Config::set('ddd-commands.domain_namespace', 'Tests\\Temp\\Domain');
         Config::set('ddd-commands.infrastructure_namespace', 'Tests\\Temp\\Infrastructure');
 
-        if (! File::isDirectory($tempPath)) {
+        if (!File::isDirectory($tempPath)) {
             File::makeDirectory($tempPath, 0777, true);
         }
     }
@@ -55,4 +52,8 @@ abstract class GeneratorTestCase extends TestCase
             File::deleteDirectory($tempPath);
         }
     }
+
+
 }
+
+
