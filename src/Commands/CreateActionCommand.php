@@ -16,6 +16,7 @@ use Ldaidone\LaravelDddCommands\Support\DomainAutoFixer;
  * to generate the boilerplate code for the action.
  *
  * @author Leo Daidone <leo.daidone@gmail.com>
+ *
  * @link https://github.com/ldaidone
  * @link https://www.linkedin.com/in/leodaidone
  */
@@ -74,7 +75,7 @@ class CreateActionCommand extends Command
     /**
      * Extract the domain name from the full action name.
      *
-     * @param string $name The full name in format "Domain/Action"
+     * @param  string  $name  The full name in format "Domain/Action"
      * @return string The extracted domain name
      */
     protected function extractDomain(string $name): string

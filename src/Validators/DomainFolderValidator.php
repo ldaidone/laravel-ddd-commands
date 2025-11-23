@@ -12,6 +12,7 @@ use Illuminate\Support\Str;
  * and whether they contain files, helping ensure proper DDD structure.
  *
  * @author Leo Daidone <leo.daidone@gmail.com>
+ *
  * @link https://github.com/ldaidone
  * @link https://www.linkedin.com/in/leodaidone
  */
@@ -19,22 +20,16 @@ class DomainFolderValidator
 {
     /**
      * The name of the domain being validated.
-     *
-     * @var string
      */
     protected string $domain;
 
     /**
      * The base path to the domain directory.
-     *
-     * @var string
      */
     protected string $basePath;
 
     /**
      * The list of required folders that should exist in each domain.
-     *
-     * @var array
      */
     protected array $requiredFolders = [
         'Entities',
@@ -46,7 +41,7 @@ class DomainFolderValidator
     /**
      * Initialize the domain folder validator with a domain name.
      *
-     * @param string $domain The name of the domain to validate
+     * @param  string  $domain  The name of the domain to validate
      */
     public function __construct(string $domain)
     {
@@ -146,7 +141,7 @@ class DomainFolderValidator
      * This method checks if the repository interface, repository implementation,
      * and ID value object exist for a specific entity.
      *
-     * @param string $entity The name of the entity to validate
+     * @param  string  $entity  The name of the entity to validate
      * @return array An array with validation results for the entity's components
      */
     protected function validateEntity(string $entity): array

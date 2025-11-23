@@ -8,6 +8,7 @@ namespace Ldaidone\LaravelDddCommands\Exceptions;
  * This exception is used when attempting to create a repository interface that already exists.
  *
  * @author Leo Daidone <leo.daidone@gmail.com>
+ *
  * @link https://github.com/ldaidone
  * @link https://www.linkedin.com/in/leodaidone
  */

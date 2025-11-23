@@ -7,6 +7,7 @@
  * including paths and namespaces for domain and infrastructure code.
  *
  * @author Leo Daidone <leo.daidone@gmail.com>
+ *
  * @link https://github.com/ldaidone
  * @link https://www.linkedin.com/in/leodaidone
  */

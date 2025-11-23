@@ -13,6 +13,7 @@ use Illuminate\Support\Str;
  * if they don't already exist.
  *
  * @author Leo Daidone <leo.daidone@gmail.com>
+ *
  * @link https://github.com/ldaidone
  * @link https://www.linkedin.com/in/leodaidone
  */
@@ -20,22 +21,16 @@ class DomainAutoFixer
 {
     /**
      * The name of the domain being processed.
-     *
-     * @var string
      */
     protected string $domain;
 
     /**
      * The base path for the domain directory.
-     *
-     * @var string
      */
     protected string $basePath;
 
     /**
      * The list of required subfolders that should exist in each domain.
-     *
-     * @var array
      */
     protected array $requiredFolders = [
         'Entities',
@@ -47,7 +42,7 @@ class DomainAutoFixer
     /**
      * Initialize the domain auto-fixer with a domain name.
      *
-     * @param string $domain The name of the domain to process
+     * @param  string  $domain  The name of the domain to process
      */
     public function __construct(string $domain)
     {
@@ -61,8 +56,6 @@ class DomainAutoFixer
      *
      * This method creates the main domain directory and all required
      * subdirectories if they don't already exist.
-     *
-     * @return void
      */
     public function ensureDomainStructure(): void
     {

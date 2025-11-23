@@ -11,6 +11,7 @@ use Illuminate\Support\Str;
  * It extends the BaseGenerator to handle file creation and stub processing.
  *
  * @author Leo Daidone <leo.daidone@gmail.com>
+ *
  * @link https://github.com/ldaidone
  * @link https://www.linkedin.com/in/leodaidone
  */
@@ -18,43 +19,33 @@ class ValueObjectGenerator extends BaseGenerator
 {
     /**
      * The namespace for the generated class.
-     *
-     * @var string
      */
     protected string $namespace;
 
     /**
      * The root namespace for the domain.
-     *
-     * @var string
      */
     protected string $rootNamespace;
 
     /**
      * The domain name.
-     *
-     * @var string
      */
     protected string $domain;
 
     /**
      * The entity name.
-     *
-     * @var string
      */
     protected string $entity;
 
     /**
      * The class name.
-     *
-     * @var string
      */
     protected string $class;
 
     /**
      * Initialize the value object generator with the provided name.
      *
-     * @param string $name The name of the value object in format "Domain/ValueObject"
+     * @param  string  $name  The name of the value object in format "Domain/ValueObject"
      */
     public function __construct(string $name)
     {
@@ -101,8 +92,6 @@ class ValueObjectGenerator extends BaseGenerator
      *
      * This method processes the stub file by replacing placeholders
      * with actual values and creates the value object class file.
-     *
-     * @return void
      */
     public function createValueObjectIfStubExists(): void
     {

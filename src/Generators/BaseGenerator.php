@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\File;
  * creation, stub management, and directory creation.
  *
  * @author Leo Daidone <leo.daidone@gmail.com>
+ *
  * @link https://github.com/ldaidone
  * @link https://www.linkedin.com/in/leodaidone
  */
@@ -19,22 +20,16 @@ class BaseGenerator
 {
     /**
      * The file path where the generated class will be saved.
-     *
-     * @var string
      */
     protected string $path = '';
 
     /**
      * The type of DDD component being generated (e.g., entity, usecase, command).
-     *
-     * @var string
      */
     protected string $type = '';
 
     /**
      * The path to the stub template file for this component type.
-     *
-     * @var string
      */
     protected string $stubPath = '';
 
@@ -44,8 +39,8 @@ class BaseGenerator
      * This constructor sets up the paths for the target file and stub template,
      * checking if a published stub exists to override the default stub.
      *
-     * @param string $path The file path where the generated class will be saved
-     * @param string $type The type of DDD component being generated
+     * @param  string  $path  The file path where the generated class will be saved
+     * @param  string  $type  The type of DDD component being generated
      */
     public function __construct(string $path, string $type)
     {
@@ -102,8 +97,8 @@ class BaseGenerator
      * This method handles the creation of a new file by replacing
      * placeholders in the stub with actual values.
      *
-     * @param array $tags Array of placeholder tags to replace
-     * @param array $replacements Array of replacement values for the tags
+     * @param  array  $tags  Array of placeholder tags to replace
+     * @param  array  $replacements  Array of replacement values for the tags
      * @return string The path to the created file, or empty string if stub doesn't exist
      */
     protected function createIfStubExists(array $tags, array $replacements): string

@@ -16,6 +16,7 @@ use Ldaidone\LaravelDddCommands\Support\DomainAutoFixer;
  * to generate the boilerplate code for the entity.
  *
  * @author Leo Daidone <leo.daidone@gmail.com>
+ *
  * @link https://github.com/ldaidone
  * @link https://www.linkedin.com/in/leodaidone
  */
@@ -74,7 +75,7 @@ class CreateEntityCommand extends Command
     /**
      * Extract the domain name from the full entity name.
      *
-     * @param string $name The full name in format "Domain/Entity"
+     * @param  string  $name  The full name in format "Domain/Entity"
      * @return string The extracted domain name
      */
     protected function extractDomain(string $name): string

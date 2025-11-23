@@ -16,6 +16,7 @@ use Ldaidone\LaravelDddCommands\Support\DomainAutoFixer;
  * to generate the boilerplate code for the value object.
  *
  * @author Leo Daidone <leo.daidone@gmail.com>
+ *
  * @link https://github.com/ldaidone
  * @link https://www.linkedin.com/in/leodaidone
  */
@@ -74,7 +75,7 @@ class CreateValueObjectCommand extends Command
     /**
      * Extract the domain name from the full value object name.
      *
-     * @param string $name The full name in format "Domain/ValueObject"
+     * @param  string  $name  The full name in format "Domain/ValueObject"
      * @return string The extracted domain name
      */
     protected function extractDomain(string $name): string

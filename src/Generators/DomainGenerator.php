@@ -12,6 +12,7 @@ use Illuminate\Support\Str;
  * including all required subdirectories and a README file.
  *
  * @author Leo Daidone <leo.daidone@gmail.com>
+ *
  * @link https://github.com/ldaidone
  * @link https://www.linkedin.com/in/leodaidone
  */
@@ -19,22 +20,18 @@ class DomainGenerator
 {
     /**
      * The name of the domain being generated.
-     *
-     * @var string
      */
     protected string $name;
 
     /**
      * The path to the domain directory.
-     *
-     * @var string
      */
     protected string $domainPath;
 
     /**
      * Initialize the domain generator with the provided name.
      *
-     * @param string $name The name of the domain
+     * @param  string  $name  The name of the domain
      */
     public function __construct(string $name)
     {
@@ -59,8 +56,6 @@ class DomainGenerator
      *
      * This method creates the main domain directory and all required
      * subdirectories if they don't already exist, adding .gitkeep files.
-     *
-     * @return void
      */
     public function createDirectories(): void
     {
@@ -81,8 +76,6 @@ class DomainGenerator
      *
      * This method processes the domain README stub file by replacing placeholders
      * with actual values and creates the README file for the domain.
-     *
-     * @return void
      */
     public function createReadmeIfStubExists(): void
     {

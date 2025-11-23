@@ -11,6 +11,7 @@ use Illuminate\Support\Str;
  * It extends the BaseGenerator to handle file creation and stub processing.
  *
  * @author Leo Daidone <leo.daidone@gmail.com>
+ *
  * @link https://github.com/ldaidone
  * @link https://www.linkedin.com/in/leodaidone
  */
@@ -18,51 +19,39 @@ class RepositoryEloquentGenerator extends BaseGenerator
 {
     /**
      * The namespace for the generated class.
-     *
-     * @var string
      */
     protected string $namespace;
 
     /**
      * The root namespace for the application.
-     *
-     * @var string
      */
     protected string $rootNamespace;
 
     /**
      * The domain name.
-     *
-     * @var string
      */
     protected string $domain;
 
     /**
      * The entity name.
-     *
-     * @var string
      */
     protected string $entity;
 
     /**
      * The class name.
-     *
-     * @var string
      */
     protected string $class;
 
     /**
      * The interface name.
-     *
-     * @var string
      */
     protected string $interface;
 
     /**
      * Initialize the repository Eloquent generator with the provided name and interface.
      *
-     * @param string $name The name of the repository in format "Domain/Repository"
-     * @param string $interface The name of the interface the repository implements
+     * @param  string  $name  The name of the repository in format "Domain/Repository"
+     * @param  string  $interface  The name of the interface the repository implements
      */
     public function __construct(string $name, string $interface)
     {
@@ -119,8 +108,6 @@ class RepositoryEloquentGenerator extends BaseGenerator
      *
      * This method processes the stub file by replacing placeholders
      * with actual values and creates the repository Eloquent class file.
-     *
-     * @return void
      */
     public function createRepositoryEloquentIfStubExists(): void
     {

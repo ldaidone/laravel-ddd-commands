@@ -15,6 +15,7 @@ use Ldaidone\LaravelDddCommands\Support\DomainAutoFixer;
  * to generate the boilerplate code for the event.
  *
  * @author Leo Daidone <leo.daidone@gmail.com>
+ *
  * @link https://github.com/ldaidone
  * @link https://www.linkedin.com/in/leodaidone
  */
@@ -73,7 +74,7 @@ class CreateEventCommand extends Command
     /**
      * Extract the domain name from the full event name.
      *
-     * @param string $name The full name in format "Domain/Event"
+     * @param  string  $name  The full name in format "Domain/Event"
      * @return string The extracted domain name
      */
     protected function extractDomain(string $name): string

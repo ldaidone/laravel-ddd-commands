@@ -10,6 +10,7 @@ namespace Ldaidone\LaravelDddCommands\Commands\Concerns;
  * these values programmatically.
  *
  * @author Leo Daidone <leo.daidone@gmail.com>
+ *
  * @link https://github.com/ldaidone
  * @link https://www.linkedin.com/in/leodaidone
  */

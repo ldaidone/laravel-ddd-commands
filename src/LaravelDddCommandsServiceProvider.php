@@ -11,6 +11,7 @@ use Illuminate\Support\ServiceProvider;
  * and handles the publishing of configuration and stub files.
  *
  * @author Leo Daidone <leo.daidone@gmail.com>
+ *
  * @link https://github.com/ldaidone
  * @link https://www.linkedin.com/in/leodaidone
  */

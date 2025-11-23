@@ -19,6 +19,7 @@ use Ldaidone\LaravelDddCommands\Support\DomainAutoFixer;
  * if it doesn't exist and uses stub templates to generate the boilerplate code.
  *
  * @author Leo Daidone <leo.daidone@gmail.com>
+ *
  * @link https://github.com/ldaidone
  * @link https://www.linkedin.com/in/leodaidone
  */
@@ -83,8 +84,9 @@ class CreateRepositoryCommand extends Command
      * This method creates the repository interface using the appropriate generator.
      * If the interface already exists, it throws an exception.
      *
-     * @param string $name The name of the repository
+     * @param  string  $name  The name of the repository
      * @return string The path to the created interface file
+     *
      * @throws RepositoryInterfaceAlreadyExistsException If the interface already exists
      */
     private function generateInterface(string $name): string
@@ -108,8 +110,9 @@ class CreateRepositoryCommand extends Command
      * This method creates the Eloquent repository implementation using the appropriate generator.
      * If the implementation already exists, it throws an exception.
      *
-     * @param string $name The name of the repository
+     * @param  string  $name  The name of the repository
      * @return string The path to the created Eloquent repository file
+     *
      * @throws RepositoryEloquentAlreadyExistsException If the Eloquent repository already exists
      */
     private function generateEloquent(string $name): string
@@ -138,7 +141,7 @@ class CreateRepositoryCommand extends Command
     /**
      * Extract the domain name from the full repository name.
      *
-     * @param string $name The full name in format "Domain/Repository"
+     * @param  string  $name  The full name in format "Domain/Repository"
      * @return string The extracted domain name
      */
     protected function extractDomain(string $name): string

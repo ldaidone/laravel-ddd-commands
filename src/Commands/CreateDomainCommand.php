@@ -15,6 +15,7 @@ use Ldaidone\LaravelDddCommands\Support\DomainAutoFixer;
  * It creates all the necessary subdirectories following DDD conventions.
  *
  * @author Leo Daidone <leo.daidone@gmail.com>
+ *
  * @link https://github.com/ldaidone
  * @link https://www.linkedin.com/in/leodaidone
  */
@@ -73,7 +74,7 @@ class CreateDomainCommand extends Command
     /**
      * Extract the domain name from the full domain name.
      *
-     * @param string $name The full domain name
+     * @param  string  $name  The full domain name
      * @return string The extracted domain name
      */
     protected function extractDomain(string $name): string
