@@ -5,6 +5,9 @@ Generate domains, use cases, entities, value objects, repositories, events, aggr
 
 <p align="left"> <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-Apache%202.0-blue.svg"></a> <a href="#"><img alt="Tests" src="https://github.com/ldaidone/laravel-ddd-commands/actions/workflows/tests.yml/badge.svg"></a> <a href="#"><img alt="Coverage" src="https://img.shields.io/codecov/c/github/ldaidone/laravel-ddd-commands?style=flat-square"></a> <a href="https://packagist.org/packages/ldaidone/laravel-ddd-commands"><img alt="Packagist" src="https://img.shields.io/packagist/v/ldaidone/laravel-ddd-commands.svg"></a> <a href="https://packagist.org/packages/ldaidone/laravel-ddd-commands"><img alt="Downloads" src="https://img.shields.io/packagist/dt/ldaidone/laravel-ddd-commands.svg"></a> </p>
 
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/leodaido)
+
 ---
 
 ### ✨ Features
