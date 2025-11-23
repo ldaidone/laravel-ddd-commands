@@ -1,0 +1,11 @@
+# {{ domain }} Domain
+
+This domain encapsulates all business rules related to **{{ domain }}**.
+
+## Structure
+
+- **Entities**: Core business objects.
+- **ValueObjects**: Immutable value types.
+- **UseCases**: Application-specific actions.
+- **Repositories**: Interfaces for persistence.
+- **Events**: Domain and integration events.

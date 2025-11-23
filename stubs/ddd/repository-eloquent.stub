@@ -1,0 +1,35 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ rootNamespace }}Domain\{{ domain }}\Entities\{{ entity }};
+use {{ rootNamespace }}Domain\{{ domain }}\Repositories\{{ interface }};
+
+class {{ class }} implements {{ interface }}
+{
+    /**
+     * Eloquent-backed implementation of {{ interface }}.
+     * You may adjust fields or add mapping logic as needed.
+     */
+
+    public function all()
+    {
+        return {{ entity }}::all();
+    }
+
+    public function find($id)
+    {
+        return {{ entity }}::find($id);
+    }
+
+    public function save($entity)
+    {
+        $entity->save(); // assumes Entity extends Model; otherwise adapt mapping.
+        return $entity;
+    }
+
+    public function delete($id)
+    {
+        return {{ entity }}::destroy($id);
+    }
+}

@@ -1,0 +1,18 @@
+<?php
+
+namespace {{ namespace }};
+
+class {{ class }}
+{
+    /**
+     * Commands represent an intention to change the state of the system.
+     * They should contain all data required to execute the action.
+     */
+     
+    public function __construct(
+        // Add command properties here
+        // Example:
+        // public readonly string $name,
+        // public readonly string $email,
+    ) {}
+}

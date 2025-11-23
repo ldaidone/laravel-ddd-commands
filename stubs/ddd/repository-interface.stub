@@ -1,0 +1,20 @@
+<?php
+
+namespace {{ namespace }};
+
+interface {{ class }}
+{
+    /**
+     * Domain-level persistence contract.
+     * The infrastructure layer provides actual implementation.
+     */
+
+    public function all();
+
+    public function find($id);
+
+    public function save($entity);
+
+    public function delete($id);
+
+}

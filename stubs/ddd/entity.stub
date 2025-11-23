@@ -1,0 +1,19 @@
+<?php
+
+namespace {{ namespace }};
+
+class {{ class }}
+{
+    /**
+     * Make your entity values explicit.
+     * Entities should model behavior, not just hold data.
+     */
+
+    public function __construct(
+        // Example:
+        // protected string $id,
+        // protected string $name,
+    ) {}
+
+    // Add domain behaviors here.
+}

@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1763767885">
+  <project timestamp="1763767885">
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Commands/Concerns/ExposesSignature.php">
+      <class name="Ldaidone\LaravelDddCommands\Commands\Concerns\ExposesSignature" namespace="global">
+        <metrics complexity="2" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="1" elements="4" coveredelements="2"/>
+      </class>
+      <line num="7" type="method" name="getSignature" visibility="public" complexity="1" crap="1" count="5"/>
+      <line num="9" type="stmt" count="5"/>
+      <line num="12" type="method" name="getDescriptionText" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="14" type="stmt" count="0"/>
+      <metrics loc="17" ncloc="17" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="1" elements="4" coveredelements="2"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Commands/CreateActionCommand.php">
+      <class name="Ldaidone\LaravelDddCommands\Commands\CreateActionCommand" namespace="global">
+        <metrics complexity="3" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="10" elements="14" coveredelements="11"/>
+      </class>
+      <line num="19" type="method" name="handle" visibility="public" complexity="2" crap="2.02" count="1"/>
+      <line num="21" type="stmt" count="1"/>
+      <line num="23" type="stmt" count="1"/>
+      <line num="25" type="stmt" count="1"/>
+      <line num="26" type="stmt" count="1"/>
+      <line num="28" type="stmt" count="1"/>
+      <line num="30" type="stmt" count="1"/>
+      <line num="31" type="stmt" count="0"/>
+      <line num="33" type="stmt" count="0"/>
+      <line num="36" type="stmt" count="1"/>
+      <line num="38" type="stmt" count="1"/>
+      <line num="40" type="stmt" count="1"/>
+      <line num="43" type="method" name="extractDomain" visibility="protected" complexity="1" crap="1" count="1"/>
+      <line num="45" type="stmt" count="1"/>
+      <metrics loc="48" ncloc="48" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="10" elements="14" coveredelements="11"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Commands/CreateAggregateCommand.php">
+      <class name="Ldaidone\LaravelDddCommands\Commands\CreateAggregateCommand" namespace="global">
+        <metrics complexity="3" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="10" elements="14" coveredelements="11"/>
+      </class>
+      <line num="19" type="method" name="handle" visibility="public" complexity="2" crap="2.02" count="1"/>
+      <line num="21" type="stmt" count="1"/>
+      <line num="23" type="stmt" count="1"/>
+      <line num="25" type="stmt" count="1"/>
+      <line num="26" type="stmt" count="1"/>
+      <line num="28" type="stmt" count="1"/>
+      <line num="30" type="stmt" count="1"/>
+      <line num="31" type="stmt" count="0"/>
+      <line num="33" type="stmt" count="0"/>
+      <line num="36" type="stmt" count="1"/>
+      <line num="38" type="stmt" count="1"/>
+      <line num="40" type="stmt" count="1"/>
+      <line num="43" type="method" name="extractDomain" visibility="protected" complexity="1" crap="1" count="1"/>
+      <line num="45" type="stmt" count="1"/>
+      <metrics loc="48" ncloc="48" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="10" elements="14" coveredelements="11"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Commands/CreateCommandCommand.php">
+      <class name="Ldaidone\LaravelDddCommands\Commands\CreateCommandCommand" namespace="global">
+        <metrics complexity="3" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="0" elements="14" coveredelements="0"/>
+      </class>
+      <line num="19" type="method" name="handle" visibility="public" complexity="2" crap="6" count="0"/>
+      <line num="21" type="stmt" count="0"/>
+      <line num="23" type="stmt" count="0"/>
+      <line num="25" type="stmt" count="0"/>
+      <line num="26" type="stmt" count="0"/>
+      <line num="28" type="stmt" count="0"/>
+      <line num="30" type="stmt" count="0"/>
+      <line num="31" type="stmt" count="0"/>
+      <line num="33" type="stmt" count="0"/>
+      <line num="36" type="stmt" count="0"/>
+      <line num="38" type="stmt" count="0"/>
+      <line num="40" type="stmt" count="0"/>
+      <line num="43" type="method" name="extractDomain" visibility="protected" complexity="1" crap="2" count="0"/>
+      <line num="45" type="stmt" count="0"/>
+      <metrics loc="47" ncloc="47" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="0" elements="14" coveredelements="0"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Commands/CreateDomainCommand.php">
+      <class name="Ldaidone\LaravelDddCommands\Commands\CreateDomainCommand" namespace="global">
+        <metrics complexity="3" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="11" elements="15" coveredelements="12"/>
+      </class>
+      <line num="22" type="method" name="handle" visibility="public" complexity="2" crap="2.02" count="1"/>
+      <line num="24" type="stmt" count="1"/>
+      <line num="26" type="stmt" count="1"/>
+      <line num="28" type="stmt" count="1"/>
+      <line num="30" type="stmt" count="1"/>
+      <line num="31" type="stmt" count="0"/>
+      <line num="33" type="stmt" count="0"/>
+      <line num="36" type="stmt" count="1"/>
+      <line num="37" type="stmt" count="1"/>
+      <line num="39" type="stmt" count="1"/>
+      <line num="40" type="stmt" count="1"/>
+      <line num="42" type="stmt" count="1"/>
+      <line num="44" type="stmt" count="1"/>
+      <line num="47" type="method" name="extractDomain" visibility="protected" complexity="1" crap="1" count="1"/>
+      <line num="49" type="stmt" count="1"/>
+      <metrics loc="52" ncloc="49" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="11" elements="15" coveredelements="12"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Commands/CreateDtoCommand.php">
+      <class name="Ldaidone\LaravelDddCommands\Commands\CreateDtoCommand" namespace="global">
+        <metrics complexity="3" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="10" elements="14" coveredelements="11"/>
+      </class>
+      <line num="19" type="method" name="handle" visibility="public" complexity="2" crap="2.02" count="1"/>
+      <line num="21" type="stmt" count="1"/>
+      <line num="23" type="stmt" count="1"/>
+      <line num="25" type="stmt" count="1"/>
+      <line num="26" type="stmt" count="1"/>
+      <line num="28" type="stmt" count="1"/>
+      <line num="30" type="stmt" count="1"/>
+      <line num="31" type="stmt" count="0"/>
+      <line num="33" type="stmt" count="0"/>
+      <line num="36" type="stmt" count="1"/>
+      <line num="38" type="stmt" count="1"/>
+      <line num="40" type="stmt" count="1"/>
+      <line num="43" type="method" name="extractDomain" visibility="protected" complexity="1" crap="1" count="1"/>
+      <line num="45" type="stmt" count="1"/>
+      <metrics loc="48" ncloc="48" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="10" elements="14" coveredelements="11"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Commands/CreateEntityCommand.php">
+      <class name="Ldaidone\LaravelDddCommands\Commands\CreateEntityCommand" namespace="global">
+        <metrics complexity="3" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="10" elements="14" coveredelements="11"/>
+      </class>
+      <line num="19" type="method" name="handle" visibility="public" complexity="2" crap="2.02" count="1"/>
+      <line num="21" type="stmt" count="1"/>
+      <line num="23" type="stmt" count="1"/>
+      <line num="25" type="stmt" count="1"/>
+      <line num="26" type="stmt" count="1"/>
+      <line num="28" type="stmt" count="1"/>
+      <line num="30" type="stmt" count="1"/>
+      <line num="31" type="stmt" count="0"/>
+      <line num="33" type="stmt" count="0"/>
+      <line num="36" type="stmt" count="1"/>
+      <line num="38" type="stmt" count="1"/>
+      <line num="40" type="stmt" count="1"/>
+      <line num="43" type="method" name="extractDomain" visibility="protected" complexity="1" crap="1" count="1"/>
+      <line num="45" type="stmt" count="1"/>
+      <metrics loc="48" ncloc="48" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="10" elements="14" coveredelements="11"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Commands/CreateEventCommand.php">
+      <class name="Ldaidone\LaravelDddCommands\Commands\CreateEventCommand" namespace="global">
+        <metrics complexity="3" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="10" elements="14" coveredelements="11"/>
+      </class>
+      <line num="18" type="method" name="handle" visibility="public" complexity="2" crap="2.02" count="1"/>
+      <line num="20" type="stmt" count="1"/>
+      <line num="22" type="stmt" count="1"/>
+      <line num="24" type="stmt" count="1"/>
+      <line num="25" type="stmt" count="1"/>
+      <line num="27" type="stmt" count="1"/>
+      <line num="29" type="stmt" count="1"/>
+      <line num="30" type="stmt" count="0"/>
+      <line num="32" type="stmt" count="0"/>
+      <line num="35" type="stmt" count="1"/>
+      <line num="37" type="stmt" count="1"/>
+      <line num="39" type="stmt" count="1"/>
+      <line num="42" type="method" name="extractDomain" visibility="protected" complexity="1" crap="1" count="1"/>
+      <line num="44" type="stmt" count="1"/>
+      <metrics loc="47" ncloc="47" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="10" elements="14" coveredelements="11"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Commands/CreateQueryCommand.php">
+      <class name="Ldaidone\LaravelDddCommands\Commands\CreateQueryCommand" namespace="global">
+        <metrics complexity="3" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="0" elements="14" coveredelements="0"/>
+      </class>
+      <line num="19" type="method" name="handle" visibility="public" complexity="2" crap="6" count="0"/>
+      <line num="21" type="stmt" count="0"/>
+      <line num="23" type="stmt" count="0"/>
+      <line num="25" type="stmt" count="0"/>
+      <line num="26" type="stmt" count="0"/>
+      <line num="28" type="stmt" count="0"/>
+      <line num="30" type="stmt" count="0"/>
+      <line num="31" type="stmt" count="0"/>
+      <line num="33" type="stmt" count="0"/>
+      <line num="36" type="stmt" count="0"/>
+      <line num="38" type="stmt" count="0"/>
+      <line num="40" type="stmt" count="0"/>
+      <line num="43" type="method" name="extractDomain" visibility="protected" complexity="1" crap="2" count="0"/>
+      <line num="45" type="stmt" count="0"/>
+      <metrics loc="47" ncloc="47" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="0" elements="14" coveredelements="0"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Commands/CreateRepositoryCommand.php">
+      <class name="Ldaidone\LaravelDddCommands\Commands\CreateRepositoryCommand" namespace="global">
+        <metrics complexity="8" methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="19" elements="35" coveredelements="20"/>
+      </class>
+      <line num="22" type="method" name="handle" visibility="public" complexity="3" crap="4.12" count="1"/>
+      <line num="24" type="stmt" count="1"/>
+      <line num="27" type="stmt" count="1"/>
+      <line num="28" type="stmt" count="1"/>
+      <line num="30" type="stmt" count="1"/>
+      <line num="31" type="stmt" count="1"/>
+      <line num="33" type="stmt" count="1"/>
+      <line num="35" type="stmt" count="0"/>
+      <line num="37" type="stmt" count="0"/>
+      <line num="39" type="stmt" count="0"/>
+      <line num="41" type="stmt" count="0"/>
+      <line num="43" type="stmt" count="0"/>
+      <line num="45" type="stmt" count="0"/>
+      <line num="49" type="method" name="generateInterface" visibility="private" complexity="2" crap="2.31" count="1"/>
+      <line num="51" type="stmt" count="1"/>
+      <line num="53" type="stmt" count="1"/>
+      <line num="54" type="stmt" count="0"/>
+      <line num="55" type="stmt" count="0"/>
+      <line num="56" type="stmt" count="0"/>
+      <line num="59" type="stmt" count="1"/>
+      <line num="61" type="stmt" count="1"/>
+      <line num="64" type="method" name="generateEloquent" visibility="private" complexity="2" crap="2.08" count="1"/>
+      <line num="67" type="stmt" count="1"/>
+      <line num="69" type="stmt" count="1"/>
+      <line num="71" type="stmt" count="1"/>
+      <line num="72" type="stmt" count="1"/>
+      <line num="74" type="stmt" count="1"/>
+      <line num="76" type="stmt" count="1"/>
+      <line num="77" type="stmt" count="0"/>
+      <line num="78" type="stmt" count="0"/>
+      <line num="79" type="stmt" count="0"/>
+      <line num="82" type="stmt" count="1"/>
+      <line num="84" type="stmt" count="1"/>
+      <line num="87" type="method" name="extractDomain" visibility="protected" complexity="1" crap="1" count="1"/>
+      <line num="89" type="stmt" count="1"/>
+      <metrics loc="92" ncloc="91" classes="1" methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="19" elements="35" coveredelements="20"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Commands/CreateUseCaseCommand.php">
+      <class name="Ldaidone\LaravelDddCommands\Commands\CreateUseCaseCommand" namespace="global">
+        <metrics complexity="3" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="10" elements="14" coveredelements="11"/>
+      </class>
+      <line num="19" type="method" name="handle" visibility="public" complexity="2" crap="2.02" count="1"/>
+      <line num="21" type="stmt" count="1"/>
+      <line num="23" type="stmt" count="1"/>
+      <line num="25" type="stmt" count="1"/>
+      <line num="26" type="stmt" count="1"/>
+      <line num="28" type="stmt" count="1"/>
+      <line num="30" type="stmt" count="1"/>
+      <line num="31" type="stmt" count="0"/>
+      <line num="33" type="stmt" count="0"/>
+      <line num="36" type="stmt" count="1"/>
+      <line num="38" type="stmt" count="1"/>
+      <line num="40" type="stmt" count="1"/>
+      <line num="43" type="method" name="extractDomain" visibility="protected" complexity="1" crap="1" count="1"/>
+      <line num="45" type="stmt" count="1"/>
+      <metrics loc="48" ncloc="48" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="10" elements="14" coveredelements="11"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Commands/CreateValueObjectCommand.php">
+      <class name="Ldaidone\LaravelDddCommands\Commands\CreateValueObjectCommand" namespace="global">
+        <metrics complexity="3" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="10" elements="14" coveredelements="11"/>
+      </class>
+      <line num="19" type="method" name="handle" visibility="public" complexity="2" crap="2.02" count="1"/>
+      <line num="21" type="stmt" count="1"/>
+      <line num="23" type="stmt" count="1"/>
+      <line num="25" type="stmt" count="1"/>
+      <line num="26" type="stmt" count="1"/>
+      <line num="28" type="stmt" count="1"/>
+      <line num="30" type="stmt" count="1"/>
+      <line num="31" type="stmt" count="0"/>
+      <line num="33" type="stmt" count="0"/>
+      <line num="36" type="stmt" count="1"/>
+      <line num="38" type="stmt" count="1"/>
+      <line num="40" type="stmt" count="1"/>
+      <line num="43" type="method" name="extractDomain" visibility="protected" complexity="1" crap="1" count="1"/>
+      <line num="45" type="stmt" count="1"/>
+      <metrics loc="48" ncloc="48" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="10" elements="14" coveredelements="11"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Exceptions/RepositoryEloquentAlreadyExistsException.php">
+      <class name="Ldaidone\LaravelDddCommands\Exceptions\RepositoryEloquentAlreadyExistsException" namespace="global">
+        <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </class>
+      <metrics loc="6" ncloc="6" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Exceptions/RepositoryInterfaceAlreadyExistsException.php">
+      <class name="Ldaidone\LaravelDddCommands\Exceptions\RepositoryInterfaceAlreadyExistsException" namespace="global">
+        <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </class>
+      <metrics loc="6" ncloc="6" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Generators/ActionGenerator.php">
+      <class name="Ldaidone\LaravelDddCommands\Generators\ActionGenerator" namespace="global">
+        <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="23" coveredelements="23"/>
+      </class>
+      <line num="19" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="21" type="stmt" count="1"/>
+      <line num="23" type="stmt" count="1"/>
+      <line num="25" type="stmt" count="1"/>
+      <line num="26" type="stmt" count="1"/>
+      <line num="27" type="stmt" count="1"/>
+      <line num="29" type="stmt" count="1"/>
+      <line num="30" type="stmt" count="1"/>
+      <line num="31" type="stmt" count="1"/>
+      <line num="33" type="stmt" count="1"/>
+      <line num="36" type="method" name="getTags" visibility="protected" complexity="1" crap="1" count="1"/>
+      <line num="38" type="stmt" count="1"/>
+      <line num="39" type="stmt" count="1"/>
+      <line num="40" type="stmt" count="1"/>
+      <line num="41" type="stmt" count="1"/>
+      <line num="44" type="method" name="getActionPath" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="46" type="stmt" count="1"/>
+      <line num="49" type="method" name="createActionIfStubExists" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="51" type="stmt" count="1"/>
+      <line num="52" type="stmt" count="1"/>
+      <line num="53" type="stmt" count="1"/>
+      <line num="54" type="stmt" count="1"/>
+      <line num="55" type="stmt" count="1"/>
+      <metrics loc="58" ncloc="58" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="23" coveredelements="23"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Generators/AggregatedGenerator.php">
+      <class name="Ldaidone\LaravelDddCommands\Generators\AggregatedGenerator" namespace="global">
+        <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="25" elements="29" coveredelements="29"/>
+      </class>
+      <line num="19" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="21" type="stmt" count="1"/>
+      <line num="23" type="stmt" count="1"/>
+      <line num="25" type="stmt" count="1"/>
+      <line num="26" type="stmt" count="1"/>
+      <line num="27" type="stmt" count="1"/>
+      <line num="28" type="stmt" count="1"/>
+      <line num="30" type="stmt" count="1"/>
+      <line num="31" type="stmt" count="1"/>
+      <line num="33" type="stmt" count="1"/>
+      <line num="36" type="method" name="getTags" visibility="protected" complexity="1" crap="1" count="1"/>
+      <line num="38" type="stmt" count="1"/>
+      <line num="39" type="stmt" count="1"/>
+      <line num="40" type="stmt" count="1"/>
+      <line num="41" type="stmt" count="1"/>
+      <line num="42" type="stmt" count="1"/>
+      <line num="43" type="stmt" count="1"/>
+      <line num="44" type="stmt" count="1"/>
+      <line num="47" type="method" name="getAggregatePath" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="49" type="stmt" count="1"/>
+      <line num="52" type="method" name="createAgregateIfStubExists" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="54" type="stmt" count="1"/>
+      <line num="55" type="stmt" count="1"/>
+      <line num="56" type="stmt" count="1"/>
+      <line num="57" type="stmt" count="1"/>
+      <line num="58" type="stmt" count="1"/>
+      <line num="59" type="stmt" count="1"/>
+      <line num="60" type="stmt" count="1"/>
+      <line num="61" type="stmt" count="1"/>
+      <metrics loc="64" ncloc="64" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="25" elements="29" coveredelements="29"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Generators/BaseGenerator.php">
+      <class name="Ldaidone\LaravelDddCommands\Generators\BaseGenerator" namespace="global">
+        <metrics complexity="12" methods="9" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="22" coveredstatements="19" elements="31" coveredelements="25"/>
+      </class>
+      <line num="15" type="method" name="__construct" visibility="public" complexity="2" crap="2.02" count="15"/>
+      <line num="19" type="stmt" count="15"/>
+      <line num="22" type="stmt" count="15"/>
+      <line num="25" type="stmt" count="15"/>
+      <line num="28" type="stmt" count="15"/>
+      <line num="29" type="stmt" count="15"/>
+      <line num="30" type="stmt" count="0"/>
+      <line num="34" type="method" name="getStubPath" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="36" type="stmt" count="0"/>
+      <line num="39" type="method" name="exists" visibility="public" complexity="1" crap="1" count="8"/>
+      <line num="41" type="stmt" count="8"/>
+      <line num="44" type="method" name="doesStubExist" visibility="public" complexity="1" crap="1" count="8"/>
+      <line num="46" type="stmt" count="8"/>
+      <line num="49" type="method" name="createIfStubExists" visibility="protected" complexity="3" crap="3.01" count="8"/>
+      <line num="51" type="stmt" count="8"/>
+      <line num="52" type="stmt" count="0"/>
+      <line num="55" type="stmt" count="8"/>
+      <line num="56" type="stmt" count="8"/>
+      <line num="57" type="stmt" count="5"/>
+      <line num="60" type="stmt" count="8"/>
+      <line num="62" type="stmt" count="8"/>
+      <line num="64" type="stmt" count="8"/>
+      <line num="66" type="stmt" count="8"/>
+      <line num="69" type="method" name="getDomainPath" visibility="protected" complexity="1" crap="1" count="14"/>
+      <line num="71" type="stmt" count="14"/>
+      <line num="74" type="method" name="getDomainNamespace" visibility="protected" complexity="1" crap="1" count="14"/>
+      <line num="76" type="stmt" count="14"/>
+      <line num="79" type="method" name="getInfrastructurePath" visibility="protected" complexity="1" crap="1" count="1"/>
+      <line num="81" type="stmt" count="1"/>
+      <line num="84" type="method" name="getInfrastructureNamespace" visibility="protected" complexity="1" crap="1" count="1"/>
+      <line num="86" type="stmt" count="1"/>
+      <metrics loc="89" ncloc="85" classes="1" methods="9" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="22" coveredstatements="19" elements="31" coveredelements="25"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Generators/CommandGenerator.php">
+      <class name="Ldaidone\LaravelDddCommands\Generators\CommandGenerator" namespace="global">
+        <metrics complexity="4" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="0" elements="23" coveredelements="0"/>
+      </class>
+      <line num="19" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="21" type="stmt" count="0"/>
+      <line num="23" type="stmt" count="0"/>
+      <line num="25" type="stmt" count="0"/>
+      <line num="26" type="stmt" count="0"/>
+      <line num="27" type="stmt" count="0"/>
+      <line num="29" type="stmt" count="0"/>
+      <line num="30" type="stmt" count="0"/>
+      <line num="31" type="stmt" count="0"/>
+      <line num="33" type="stmt" count="0"/>
+      <line num="36" type="method" name="getTags" visibility="protected" complexity="1" crap="2" count="0"/>
+      <line num="38" type="stmt" count="0"/>
+      <line num="39" type="stmt" count="0"/>
+      <line num="40" type="stmt" count="0"/>
+      <line num="41" type="stmt" count="0"/>
+      <line num="44" type="method" name="getCommandPath" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="46" type="stmt" count="0"/>
+      <line num="49" type="method" name="createCommandIfStubExists" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="51" type="stmt" count="0"/>
+      <line num="52" type="stmt" count="0"/>
+      <line num="53" type="stmt" count="0"/>
+      <line num="54" type="stmt" count="0"/>
+      <line num="55" type="stmt" count="0"/>
+      <metrics loc="57" ncloc="57" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="0" elements="23" coveredelements="0"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Generators/DomainGenerator.php">
+      <class name="Ldaidone\LaravelDddCommands\Generators\DomainGenerator" namespace="global">
+        <metrics complexity="10" methods="6" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="26" elements="34" coveredelements="30"/>
+      </class>
+      <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="3"/>
+      <line num="16" type="stmt" count="3"/>
+      <line num="19" type="stmt" count="3"/>
+      <line num="22" type="method" name="exists" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="24" type="stmt" count="1"/>
+      <line num="27" type="method" name="createDirectories" visibility="public" complexity="4" crap="4.05" count="1"/>
+      <line num="29" type="stmt" count="1"/>
+      <line num="30" type="stmt" count="0"/>
+      <line num="32" type="stmt" count="1"/>
+      <line num="33" type="stmt" count="1"/>
+      <line num="34" type="stmt" count="1"/>
+      <line num="35" type="stmt" count="1"/>
+      <line num="37" type="stmt" count="1"/>
+      <line num="41" type="method" name="createReadmeIfStubExists" visibility="public" complexity="2" crap="2.00" count="1"/>
+      <line num="43" type="stmt" count="1"/>
+      <line num="45" type="stmt" count="1"/>
+      <line num="46" type="stmt" count="0"/>
+      <line num="49" type="stmt" count="1"/>
+      <line num="51" type="stmt" count="1"/>
+      <line num="52" type="stmt" count="1"/>
+      <line num="53" type="stmt" count="1"/>
+      <line num="54" type="stmt" count="1"/>
+      <line num="55" type="stmt" count="1"/>
+      <line num="57" type="stmt" count="1"/>
+      <line num="60" type="method" name="folders" visibility="protected" complexity="1" crap="1" count="1"/>
+      <line num="62" type="stmt" count="1"/>
+      <line num="63" type="stmt" count="1"/>
+      <line num="64" type="stmt" count="1"/>
+      <line num="65" type="stmt" count="1"/>
+      <line num="66" type="stmt" count="1"/>
+      <line num="67" type="stmt" count="1"/>
+      <line num="68" type="stmt" count="1"/>
+      <line num="71" type="method" name="getDomainPath" visibility="protected" complexity="1" crap="1" count="3"/>
+      <line num="73" type="stmt" count="3"/>
+      <metrics loc="76" ncloc="74" classes="1" methods="6" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="26" elements="34" coveredelements="30"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Generators/DtoGenerator.php">
+      <class name="Ldaidone\LaravelDddCommands\Generators\DtoGenerator" namespace="global">
+        <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="23" coveredelements="23"/>
+      </class>
+      <line num="19" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="21" type="stmt" count="1"/>
+      <line num="23" type="stmt" count="1"/>
+      <line num="25" type="stmt" count="1"/>
+      <line num="26" type="stmt" count="1"/>
+      <line num="27" type="stmt" count="1"/>
+      <line num="29" type="stmt" count="1"/>
+      <line num="30" type="stmt" count="1"/>
+      <line num="31" type="stmt" count="1"/>
+      <line num="33" type="stmt" count="1"/>
+      <line num="36" type="method" name="getTags" visibility="protected" complexity="1" crap="1" count="1"/>
+      <line num="38" type="stmt" count="1"/>
+      <line num="39" type="stmt" count="1"/>
+      <line num="40" type="stmt" count="1"/>
+      <line num="41" type="stmt" count="1"/>
+      <line num="44" type="method" name="getDtoPath" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="46" type="stmt" count="1"/>
+      <line num="49" type="method" name="createDtoIfStubExists" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="51" type="stmt" count="1"/>
+      <line num="52" type="stmt" count="1"/>
+      <line num="53" type="stmt" count="1"/>
+      <line num="54" type="stmt" count="1"/>
+      <line num="55" type="stmt" count="1"/>
+      <metrics loc="58" ncloc="58" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="23" coveredelements="23"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Generators/EntityGenerator.php">
+      <class name="Ldaidone\LaravelDddCommands\Generators\EntityGenerator" namespace="global">
+        <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="23" coveredelements="23"/>
+      </class>
+      <line num="19" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="3"/>
+      <line num="21" type="stmt" count="3"/>
+      <line num="23" type="stmt" count="3"/>
+      <line num="25" type="stmt" count="3"/>
+      <line num="26" type="stmt" count="3"/>
+      <line num="27" type="stmt" count="3"/>
+      <line num="29" type="stmt" count="3"/>
+      <line num="30" type="stmt" count="3"/>
+      <line num="31" type="stmt" count="3"/>
+      <line num="33" type="stmt" count="3"/>
+      <line num="36" type="method" name="getTags" visibility="protected" complexity="1" crap="1" count="1"/>
+      <line num="38" type="stmt" count="1"/>
+      <line num="39" type="stmt" count="1"/>
+      <line num="40" type="stmt" count="1"/>
+      <line num="41" type="stmt" count="1"/>
+      <line num="44" type="method" name="getEntityPath" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="46" type="stmt" count="2"/>
+      <line num="49" type="method" name="createEntityIfStubExists" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="51" type="stmt" count="1"/>
+      <line num="52" type="stmt" count="1"/>
+      <line num="53" type="stmt" count="1"/>
+      <line num="54" type="stmt" count="1"/>
+      <line num="55" type="stmt" count="1"/>
+      <metrics loc="58" ncloc="58" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="23" coveredelements="23"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Generators/EventGenerator.php">
+      <class name="Ldaidone\LaravelDddCommands\Generators\EventGenerator" namespace="global">
+        <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="23" coveredelements="23"/>
+      </class>
+      <line num="19" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="21" type="stmt" count="1"/>
+      <line num="23" type="stmt" count="1"/>
+      <line num="25" type="stmt" count="1"/>
+      <line num="26" type="stmt" count="1"/>
+      <line num="27" type="stmt" count="1"/>
+      <line num="28" type="stmt" count="1"/>
+      <line num="30" type="stmt" count="1"/>
+      <line num="31" type="stmt" count="1"/>
+      <line num="33" type="stmt" count="1"/>
+      <line num="36" type="method" name="getTags" visibility="protected" complexity="1" crap="1" count="1"/>
+      <line num="38" type="stmt" count="1"/>
+      <line num="39" type="stmt" count="1"/>
+      <line num="40" type="stmt" count="1"/>
+      <line num="41" type="stmt" count="1"/>
+      <line num="44" type="method" name="getEventPath" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="46" type="stmt" count="1"/>
+      <line num="49" type="method" name="createEventIfStubExists" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="51" type="stmt" count="1"/>
+      <line num="52" type="stmt" count="1"/>
+      <line num="53" type="stmt" count="1"/>
+      <line num="54" type="stmt" count="1"/>
+      <line num="55" type="stmt" count="1"/>
+      <metrics loc="58" ncloc="58" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="23" coveredelements="23"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Generators/QueryGenerator.php">
+      <class name="Ldaidone\LaravelDddCommands\Generators\QueryGenerator" namespace="global">
+        <metrics complexity="4" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="0" elements="23" coveredelements="0"/>
+      </class>
+      <line num="19" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="21" type="stmt" count="0"/>
+      <line num="23" type="stmt" count="0"/>
+      <line num="25" type="stmt" count="0"/>
+      <line num="26" type="stmt" count="0"/>
+      <line num="27" type="stmt" count="0"/>
+      <line num="29" type="stmt" count="0"/>
+      <line num="30" type="stmt" count="0"/>
+      <line num="31" type="stmt" count="0"/>
+      <line num="33" type="stmt" count="0"/>
+      <line num="36" type="method" name="getTags" visibility="protected" complexity="1" crap="2" count="0"/>
+      <line num="38" type="stmt" count="0"/>
+      <line num="39" type="stmt" count="0"/>
+      <line num="40" type="stmt" count="0"/>
+      <line num="41" type="stmt" count="0"/>
+      <line num="44" type="method" name="getQueryPath" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="46" type="stmt" count="0"/>
+      <line num="49" type="method" name="createQueryIfStubExists" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="51" type="stmt" count="0"/>
+      <line num="52" type="stmt" count="0"/>
+      <line num="53" type="stmt" count="0"/>
+      <line num="54" type="stmt" count="0"/>
+      <line num="55" type="stmt" count="0"/>
+      <metrics loc="57" ncloc="57" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="0" elements="23" coveredelements="0"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Generators/RepositoryEloquentGenerator.php">
+      <class name="Ldaidone\LaravelDddCommands\Generators\RepositoryEloquentGenerator" namespace="global">
+        <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="28" elements="32" coveredelements="32"/>
+      </class>
+      <line num="21" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="23" type="stmt" count="1"/>
+      <line num="25" type="stmt" count="1"/>
+      <line num="27" type="stmt" count="1"/>
+      <line num="28" type="stmt" count="1"/>
+      <line num="30" type="stmt" count="1"/>
+      <line num="31" type="stmt" count="1"/>
+      <line num="34" type="stmt" count="1"/>
+      <line num="37" type="stmt" count="1"/>
+      <line num="39" type="stmt" count="1"/>
+      <line num="41" type="stmt" count="1"/>
+      <line num="44" type="method" name="getTags" visibility="protected" complexity="1" crap="1" count="1"/>
+      <line num="46" type="stmt" count="1"/>
+      <line num="47" type="stmt" count="1"/>
+      <line num="48" type="stmt" count="1"/>
+      <line num="49" type="stmt" count="1"/>
+      <line num="50" type="stmt" count="1"/>
+      <line num="51" type="stmt" count="1"/>
+      <line num="52" type="stmt" count="1"/>
+      <line num="53" type="stmt" count="1"/>
+      <line num="56" type="method" name="getRepositoryEloquentPath" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="58" type="stmt" count="1"/>
+      <line num="61" type="method" name="createRepositoryEloquentIfStubExists" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="63" type="stmt" count="1"/>
+      <line num="64" type="stmt" count="1"/>
+      <line num="65" type="stmt" count="1"/>
+      <line num="66" type="stmt" count="1"/>
+      <line num="67" type="stmt" count="1"/>
+      <line num="68" type="stmt" count="1"/>
+      <line num="69" type="stmt" count="1"/>
+      <line num="70" type="stmt" count="1"/>
+      <line num="72" type="stmt" count="1"/>
+      <metrics loc="75" ncloc="73" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="28" elements="32" coveredelements="32"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Generators/RepositoryInterfaceGenerator.php">
+      <class name="Ldaidone\LaravelDddCommands\Generators\RepositoryInterfaceGenerator" namespace="global">
+        <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="23" coveredelements="23"/>
+      </class>
+      <line num="19" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="21" type="stmt" count="1"/>
+      <line num="23" type="stmt" count="1"/>
+      <line num="25" type="stmt" count="1"/>
+      <line num="26" type="stmt" count="1"/>
+      <line num="27" type="stmt" count="1"/>
+      <line num="29" type="stmt" count="1"/>
+      <line num="30" type="stmt" count="1"/>
+      <line num="31" type="stmt" count="1"/>
+      <line num="33" type="stmt" count="1"/>
+      <line num="36" type="method" name="getTags" visibility="protected" complexity="1" crap="1" count="1"/>
+      <line num="38" type="stmt" count="1"/>
+      <line num="39" type="stmt" count="1"/>
+      <line num="40" type="stmt" count="1"/>
+      <line num="41" type="stmt" count="1"/>
+      <line num="44" type="method" name="getRepositoryInterfacePath" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="46" type="stmt" count="1"/>
+      <line num="49" type="method" name="createRepositoryInterfaceIfStubExists" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="51" type="stmt" count="1"/>
+      <line num="52" type="stmt" count="1"/>
+      <line num="53" type="stmt" count="1"/>
+      <line num="54" type="stmt" count="1"/>
+      <line num="56" type="stmt" count="1"/>
+      <metrics loc="59" ncloc="59" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="23" coveredelements="23"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Generators/UseCaseGenerator.php">
+      <class name="Ldaidone\LaravelDddCommands\Generators\UseCaseGenerator" namespace="global">
+        <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="23" coveredelements="23"/>
+      </class>
+      <line num="19" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="3"/>
+      <line num="21" type="stmt" count="3"/>
+      <line num="23" type="stmt" count="3"/>
+      <line num="25" type="stmt" count="3"/>
+      <line num="26" type="stmt" count="3"/>
+      <line num="27" type="stmt" count="3"/>
+      <line num="29" type="stmt" count="3"/>
+      <line num="30" type="stmt" count="3"/>
+      <line num="31" type="stmt" count="3"/>
+      <line num="33" type="stmt" count="3"/>
+      <line num="36" type="method" name="getTags" visibility="protected" complexity="1" crap="1" count="1"/>
+      <line num="38" type="stmt" count="1"/>
+      <line num="39" type="stmt" count="1"/>
+      <line num="40" type="stmt" count="1"/>
+      <line num="41" type="stmt" count="1"/>
+      <line num="44" type="method" name="getUseCasePath" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="46" type="stmt" count="2"/>
+      <line num="49" type="method" name="createUseCaseIfStubExists" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="51" type="stmt" count="1"/>
+      <line num="52" type="stmt" count="1"/>
+      <line num="53" type="stmt" count="1"/>
+      <line num="54" type="stmt" count="1"/>
+      <line num="55" type="stmt" count="1"/>
+      <metrics loc="58" ncloc="58" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="23" coveredelements="23"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Generators/ValueObjectGenerator.php">
+      <class name="Ldaidone\LaravelDddCommands\Generators\ValueObjectGenerator" namespace="global">
+        <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="23" coveredelements="23"/>
+      </class>
+      <line num="19" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="3"/>
+      <line num="21" type="stmt" count="3"/>
+      <line num="23" type="stmt" count="3"/>
+      <line num="25" type="stmt" count="3"/>
+      <line num="26" type="stmt" count="3"/>
+      <line num="27" type="stmt" count="3"/>
+      <line num="29" type="stmt" count="3"/>
+      <line num="30" type="stmt" count="3"/>
+      <line num="31" type="stmt" count="3"/>
+      <line num="33" type="stmt" count="3"/>
+      <line num="36" type="method" name="getTags" visibility="protected" complexity="1" crap="1" count="1"/>
+      <line num="38" type="stmt" count="1"/>
+      <line num="39" type="stmt" count="1"/>
+      <line num="40" type="stmt" count="1"/>
+      <line num="41" type="stmt" count="1"/>
+      <line num="44" type="method" name="getValueObjectPath" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="46" type="stmt" count="2"/>
+      <line num="49" type="method" name="createValueObjectIfStubExists" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="51" type="stmt" count="1"/>
+      <line num="52" type="stmt" count="1"/>
+      <line num="53" type="stmt" count="1"/>
+      <line num="54" type="stmt" count="1"/>
+      <line num="55" type="stmt" count="1"/>
+      <metrics loc="58" ncloc="58" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="23" coveredelements="23"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/LaravelDddCommandsServiceProvider.php">
+      <class name="Ldaidone\LaravelDddCommands\LaravelDddCommandsServiceProvider" namespace="global">
+        <metrics complexity="4" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="25" elements="28" coveredelements="28"/>
+      </class>
+      <line num="9" type="method" name="register" visibility="public" complexity="1" crap="1" count="18"/>
+      <line num="11" type="stmt" count="18"/>
+      <line num="12" type="stmt" count="18"/>
+      <line num="13" type="stmt" count="18"/>
+      <line num="16" type="method" name="boot" visibility="public" complexity="2" crap="2" count="18"/>
+      <line num="18" type="stmt" count="18"/>
+      <line num="19" type="stmt" count="18"/>
+      <line num="20" type="stmt" count="18"/>
+      <line num="21" type="stmt" count="18"/>
+      <line num="22" type="stmt" count="18"/>
+      <line num="24" type="stmt" count="18"/>
+      <line num="25" type="stmt" count="18"/>
+      <line num="26" type="stmt" count="18"/>
+      <line num="30" type="method" name="registerCommands" visibility="protected" complexity="1" crap="1" count="18"/>
+      <line num="32" type="stmt" count="18"/>
+      <line num="33" type="stmt" count="18"/>
+      <line num="34" type="stmt" count="18"/>
+      <line num="35" type="stmt" count="18"/>
+      <line num="36" type="stmt" count="18"/>
+      <line num="37" type="stmt" count="18"/>
+      <line num="38" type="stmt" count="18"/>
+      <line num="39" type="stmt" count="18"/>
+      <line num="40" type="stmt" count="18"/>
+      <line num="41" type="stmt" count="18"/>
+      <line num="42" type="stmt" count="18"/>
+      <line num="43" type="stmt" count="18"/>
+      <line num="44" type="stmt" count="18"/>
+      <line num="45" type="stmt" count="18"/>
+      <metrics loc="48" ncloc="48" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="25" elements="28" coveredelements="28"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Support/DomainAutoFixer.php">
+      <class name="Ldaidone\LaravelDddCommands\Support\DomainAutoFixer" namespace="global">
+        <metrics complexity="5" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="11" coveredelements="11"/>
+      </class>
+      <line num="21" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="9"/>
+      <line num="23" type="stmt" count="9"/>
+      <line num="24" type="stmt" count="9"/>
+      <line num="25" type="stmt" count="9"/>
+      <line num="28" type="method" name="ensureDomainStructure" visibility="public" complexity="4" crap="4" count="9"/>
+      <line num="31" type="stmt" count="9"/>
+      <line num="32" type="stmt" count="8"/>
+      <line num="36" type="stmt" count="9"/>
+      <line num="37" type="stmt" count="9"/>
+      <line num="38" type="stmt" count="9"/>
+      <line num="39" type="stmt" count="9"/>
+      <metrics loc="44" ncloc="42" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="11" coveredelements="11"/>
+    </file>
+    <file name="/home/leodaido/projects/laravel-ddd-commands/src/Validators/DomainFolderValidator.php">
+      <class name="Ldaidone\LaravelDddCommands\Validators\DomainFolderValidator" namespace="global">
+        <metrics complexity="12" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="38" coveredstatements="0" elements="44" coveredelements="0"/>
+      </class>
+      <line num="21" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="23" type="stmt" count="0"/>
+      <line num="24" type="stmt" count="0"/>
+      <line num="27" type="method" name="exists" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="29" type="stmt" count="0"/>
+      <line num="32" type="method" name="validateFolders" visibility="public" complexity="2" crap="6" count="0"/>
+      <line num="34" type="stmt" count="0"/>
+      <line num="36" type="stmt" count="0"/>
+      <line num="37" type="stmt" count="0"/>
+      <line num="39" type="stmt" count="0"/>
+      <line num="42" type="stmt" count="0"/>
+      <line num="45" type="method" name="hasEmptyFolders" visibility="public" complexity="4" crap="20" count="0"/>
+      <line num="47" type="stmt" count="0"/>
+      <line num="49" type="stmt" count="0"/>
+      <line num="50" type="stmt" count="0"/>
+      <line num="52" type="stmt" count="0"/>
+      <line num="53" type="stmt" count="0"/>
+      <line num="54" type="stmt" count="0"/>
+      <line num="55" type="stmt" count="0"/>
+      <line num="60" type="stmt" count="0"/>
+      <line num="63" type="method" name="validateStrict" visibility="public" complexity="3" crap="12" count="0"/>
+      <line num="65" type="stmt" count="0"/>
+      <line num="66" type="stmt" count="0"/>
+      <line num="67" type="stmt" count="0"/>
+      <line num="68" type="stmt" count="0"/>
+      <line num="69" type="stmt" count="0"/>
+      <line num="70" type="stmt" count="0"/>
+      <line num="73" type="stmt" count="0"/>
+      <line num="74" type="stmt" count="0"/>
+      <line num="75" type="stmt" count="0"/>
+      <line num="78" type="stmt" count="0"/>
+      <line num="79" type="stmt" count="0"/>
+      <line num="80" type="stmt" count="0"/>
+      <line num="81" type="stmt" count="0"/>
+      <line num="84" type="stmt" count="0"/>
+      <line num="87" type="method" name="validateEntity" visibility="protected" complexity="1" crap="2" count="0"/>
+      <line num="89" type="stmt" count="0"/>
+      <line num="90" type="stmt" count="0"/>
+      <line num="91" type="stmt" count="0"/>
+      <line num="93" type="stmt" count="0"/>
+      <line num="94" type="stmt" count="0"/>
+      <line num="95" type="stmt" count="0"/>
+      <line num="96" type="stmt" count="0"/>
+      <line num="97" type="stmt" count="0"/>
+      <metrics loc="100" ncloc="99" classes="1" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="38" coveredstatements="0" elements="44" coveredelements="0"/>
+    </file>
+    <metrics files="30" loc="1619" ncloc="1604" classes="28" methods="96" coveredmethods="61" conditionals="0" coveredconditionals="0" statements="500" coveredstatements="366" elements="596" coveredelements="427"/>
+  </project>
+</coverage>

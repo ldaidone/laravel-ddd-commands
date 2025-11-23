@@ -1,0 +1,17 @@
+<?php
+
+namespace {{ namespace }};
+
+class {{ class }}
+{
+    /**
+     * Queries represent an intention to read data from the system.
+     * They should contain all data required to fetch the requested information.
+     */
+     
+    public function __construct(
+        // Add query properties here
+        // Example:
+        // public readonly int $id,
+    ) {}
+}

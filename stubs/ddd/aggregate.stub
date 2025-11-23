@@ -1,0 +1,32 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ rootNamespace }}Domain\{{ domain }}\Entities\{{ entity }};
+
+/**
+ * Aggregate Root for {{ domain }} domain.
+ *
+ * Aggregates enforce invariants and act as the primary
+ * consistency boundary. All modifications to the cluster
+ * are done through this root.
+ */
+class {{ class }}
+{
+    /**
+     * Inject the root entity or supporting dependencies here.
+     */
+    public function __construct(
+        // Example:
+        // private {{ entity }} $root,
+    ) {}
+
+    /**
+     * Primary behavior of the aggregate.
+     * This is where invariants and domain rules live.
+     */
+    public function handle(): void
+    {
+        // Implement aggregate orchestration.
+    }
+}

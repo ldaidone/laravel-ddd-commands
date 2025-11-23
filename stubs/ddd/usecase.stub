@@ -1,0 +1,24 @@
+<?php
+
+namespace {{ namespace }};
+
+class {{ class }}
+{
+    /**
+     * Use Cases orchestrate domain logic.
+     * They should not depend on frameworks — only domain abstractions.
+     */
+
+    public function __construct(
+        // Inject repositories, services, value objects, etc.
+        // Example:
+        // private UserRepositoryInterface $users,
+    ) {}
+
+    public function execute(array $input = [])
+    {
+        // Implement your application logic here.
+
+        return null;
+    }
+}
