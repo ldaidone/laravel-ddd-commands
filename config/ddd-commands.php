@@ -1,5 +1,17 @@
 <?php
 
+/**
+ * Configuration file for the Laravel DDD Commands package.
+ *
+ * This file contains the default configuration options for the package,
+ * including paths and namespaces for domain and infrastructure code.
+ *
+ * @author Leo Daidone <leo.daidone@gmail.com>
+ *
+ * @link https://github.com/ldaidone
+ * @link https://www.linkedin.com/in/leodaidone
+ */
+
 return [
     /*
     |--------------------------------------------------------------------------
