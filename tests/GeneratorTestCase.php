@@ -6,11 +6,9 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\File;
 use Ldaidone\LaravelDddCommands\LaravelDddCommandsServiceProvider;
 use Orchestra\Testbench\TestCase;
-use Illuminate\Contracts\Console\Kernel as ConsoleKernel;
 
 abstract class GeneratorTestCase extends TestCase
 {
-
     protected function getPackageProviders($app)
     {
         return [
@@ -40,7 +38,7 @@ abstract class GeneratorTestCase extends TestCase
         Config::set('ddd-commands.domain_namespace', 'Tests\\Temp\\Domain');
         Config::set('ddd-commands.infrastructure_namespace', 'Tests\\Temp\\Infrastructure');
 
-        if (!File::isDirectory($tempPath)) {
+        if (! File::isDirectory($tempPath)) {
             File::makeDirectory($tempPath, 0777, true);
         }
     }
@@ -52,8 +50,4 @@ abstract class GeneratorTestCase extends TestCase
             File::deleteDirectory($tempPath);
         }
     }
-
-
 }
-
-
