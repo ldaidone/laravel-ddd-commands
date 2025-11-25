@@ -69,7 +69,7 @@ class RepositoryEloquentGenerator extends BaseGenerator
         $this->namespace = $this->getInfrastructureNamespace()."\\Database\\{$this->domain}\\Repositories";
 
         // Use configured infrastructure path
-        $this->path = base_path($this->getInfrastructurePath()."/Database/{$this->domain}/Repositories/{$this->class}.php");
+        $this->path = $this->basePath($this->getInfrastructurePath()."/Database/{$this->domain}/Repositories/{$this->class}.php");
 
         $this->type = 'repository-eloquent';
 

@@ -64,17 +64,12 @@ class CreateRepositoryCommand extends Command
 
             return Command::SUCCESS;
 
-        } catch (RepositoryInterfaceAlreadyExistsException $e) {
+        } catch (RepositoryInterfaceAlreadyExistsException|RepositoryEloquentAlreadyExistsException $e) {
 
             $this->error($e->getMessage());
 
             return Command::FAILURE;
 
-        } catch (RepositoryEloquentAlreadyExistsException $e) {
-
-            $this->error($e->getMessage());
-
-            return Command::FAILURE;
         }
     }
 

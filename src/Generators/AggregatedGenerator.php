@@ -49,16 +49,16 @@ class AggregatedGenerator extends BaseGenerator
      */
     public function __construct(string $name)
     {
-        $this->rootNamespace = $this->getDomainNamespace();
+        $this->rootNamespace = $this->rootNamespace();
 
         $parts = explode('/', $name);
 
         $this->domain = Str::studly($parts[0]);
         $this->entity = Str::studly(end($parts));
-        $this->class = $this->entity.'Aggregate';
-        $this->namespace = $this->rootNamespace.'\\'.$this->domain.'\\Aggregates';
+        $this->namespace = $this->getDomainNamespace().'\\'.$this->domain.'\\Aggregates';
 
-        $this->path = base_path($this->getDomainPath()."/{$this->domain}/Aggregates/{$this->entity}.php");
+        $this->path = $this->basePath($this->getDomainPath()."/{$this->domain}/Aggregates/{$this->entity}.php");
+        $this->class = $this->entity.'Aggregate';
         $this->type = 'aggregate';
 
         parent::__construct($this->path, $this->type);
