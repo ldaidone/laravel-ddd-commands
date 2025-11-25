@@ -41,7 +41,7 @@ class DomainGenerator extends BaseGenerator
         $this->domainPath = $this->basePath($this->getDomainPath()."/{$this->name}");
 
         // Stub path matching the exact type name
-        $this->stubPath = __DIR__ . "/../../stubs/ddd/domain-readme.stub";
+        $this->stubPath = __DIR__.'/../../stubs/ddd/domain-readme.stub';
 
     }
 
@@ -83,9 +83,9 @@ class DomainGenerator extends BaseGenerator
      */
     public function createReadmeIfStubExists(): void
     {
-        //$stubPath = __DIR__ . '/../../stubs/domain-readme.stub';
+        // $stubPath = __DIR__ . '/../../stubs/domain-readme.stub';
 
-        if (!File::exists($this->stubPath)) {
+        if (! File::exists($this->stubPath)) {
             return;
         }
 
@@ -108,7 +108,7 @@ class DomainGenerator extends BaseGenerator
     protected function getTags(): array
     {
         return [
-            '{{ domain }}'
+            '{{ domain }}',
         ];
     }
 
@@ -127,5 +127,4 @@ class DomainGenerator extends BaseGenerator
             'Events',
         ];
     }
-
 }

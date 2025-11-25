@@ -50,7 +50,7 @@ class DomainAutoFixer
 
         // Determine the base path based on environment
         if (defined('DDD_TESTING_BASE_PATH')) {
-            $this->basePath = DDD_TESTING_BASE_PATH . '/app/Domains/' . $this->domain;
+            $this->basePath = DDD_TESTING_BASE_PATH.'/app/Domains/'.$this->domain;
         } else {
             $this->basePath = base_path("app/Domains/{$this->domain}");
         }
