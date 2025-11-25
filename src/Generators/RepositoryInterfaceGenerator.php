@@ -57,9 +57,9 @@ class RepositoryInterfaceGenerator extends BaseGenerator
         $this->entity = Str::studly(end($parts));
         $this->class = $this->entity.'RepositoryInterface';
 
-        $this->namespace = $this->rootNamespace.'\\'.$this->domain.'\\Repositories';
-        $this->path = base_path($this->getDomainPath()."/{$this->domain}/Repositories/{$this->class}.php");
+        $this->path = $this->basePath($this->getDomainPath()."/{$this->domain}/Repositories/{$this->class}.php");
         $this->type = 'repository-interface';
+        $this->namespace = $this->rootNamespace()."{$this->domain}\\Repositories\\".$this->class;
 
         parent::__construct($this->path, $this->type);
     }

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd" bootstrap="tests/bootstrap.php" colors="true" cacheDirectory=".phpunit.cache" executionOrder="depends,defects" beStrictAboutOutputDuringTests="true" failOnRisky="true" failOnWarning="true">
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
+  bootstrap="tests/bootstrap.php" colors="true" cacheDirectory=".phpunit.cache"
+  executionOrder="depends,defects" beStrictAboutOutputDuringTests="true" failOnRisky="true"
+  failOnWarning="true" cacheResult="false">
   <testsuites>
     <testsuite name="Unit">
       <directory suffix="Test.php">./tests/Unit</directory>
@@ -9,10 +13,10 @@
     </testsuite>
   </testsuites>
   <php>
-    <server name="APP_ENV" value="testing"/>
-    <server name="CACHE_DRIVER" value="array"/>
-    <server name="SESSION_DRIVER" value="array"/>
-    <server name="QUEUE_DRIVER" value="sync"/>
+    <server name="APP_ENV" value="testing" />
+    <server name="CACHE_DRIVER" value="array" />
+    <server name="SESSION_DRIVER" value="array" />
+    <server name="QUEUE_DRIVER" value="sync" />
   </php>
   <source>
     <include>

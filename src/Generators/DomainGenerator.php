@@ -16,7 +16,7 @@ use Illuminate\Support\Str;
  * @link https://github.com/ldaidone
  * @link https://www.linkedin.com/in/leodaidone
  */
-class DomainGenerator
+class DomainGenerator extends BaseGenerator
 {
     /**
      * The name of the domain being generated.
@@ -38,7 +38,11 @@ class DomainGenerator
         $this->name = Str::studly($name);
         // Use the helper from BaseGenerator (which reads config)
         // We need to ensure we use the base path relative to project root
-        $this->domainPath = base_path($this->getDomainPath()."/{$this->name}");
+        $this->domainPath = $this->basePath($this->getDomainPath()."/{$this->name}");
+
+        // Stub path matching the exact type name
+        $this->stubPath = __DIR__.'/../../stubs/ddd/domain-readme.stub';
+
     }
 
     /**
@@ -79,13 +83,13 @@ class DomainGenerator
      */
     public function createReadmeIfStubExists(): void
     {
-        $stubPath = __DIR__.'/../../stubs/ddd/domain-readme.stub';
+        // $stubPath = __DIR__ . '/../../stubs/domain-readme.stub';
 
-        if (! File::exists($stubPath)) {
+        if (! File::exists($this->stubPath)) {
             return;
         }
 
-        $stub = File::get($stubPath);
+        $stub = File::get($this->stubPath);
 
         $contents = str_replace(
             ['{{ domain }}'],
@@ -94,6 +98,18 @@ class DomainGenerator
         );
 
         File::put("{$this->domainPath}/README.md", $contents);
+    }
+
+    /**
+     * Get the tags to be replaced in the stub file.
+     *
+     * @return array The array of placeholder tags to replace
+     */
+    protected function getTags(): array
+    {
+        return [
+            '{{ domain }}',
+        ];
     }
 
     /**
@@ -110,15 +126,5 @@ class DomainGenerator
             'Repositories',
             'Events',
         ];
-    }
-
-    /**
-     * Get the configured domain path from the package configuration.
-     *
-     * @return string The domain path, defaulting to 'app/Domain'
-     */
-    protected function getDomainPath(): string
-    {
-        return config('ddd-commands.domain_path', 'app/Domain');
     }
 }

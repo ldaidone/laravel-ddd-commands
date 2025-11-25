@@ -22,6 +22,42 @@ Generate domains, use cases, entities, value objects, repositories, events, aggr
 
 ---
 
+### 🏗 About the Folder Structure (Important)
+
+As of **v0.1.1**, the package **no longer uses configuration files or dynamic paths**.
+
+This is an intentional design choice.
+
+#### Why?
+Because dynamic paths introduce architectural drift.
+For DDD, structure must be **stable, predictable, enforceable**, and the same across dev machines, CI runners, and Testbench environments.
+
+The generators now follow a single, consistent convention:
+
+```markdown
+app/
+└── Domain/
+    └── Billing/
+        ├── Entities/
+        ├── ValueObjects/
+        ├── DataTransferObjects/
+        ├── UseCases/
+        ├── Actions/
+        ├── Repositories/
+        └── Events/
+```
+This improves:
+
+* maintainability
+* discovery
+* onboarding
+* large-scale refactors
+* automated testing consistency
+
+No config required. No hidden layer. No dynamic directories.
+
+---
+
 ### 📦 Installation
 
 ```bash
@@ -109,45 +145,6 @@ php artisan list ddd
 ```
 ---
 
-### 🗂 Default Folder Structure
-
-The generator uses a clean, Laravel-friendly structure (fully customizable):
-
-```markdown
-app/
-└── Domain/
-    └── Billing/
-        ├── Entities/
-        ├── ValueObjects/
-        ├── DataTransferObjects/
-        ├── UseCases/
-        ├── Actions/
-        ├── Repositories/
-        └── Events/
-```
-
-You can override this via config/ddd.php (published automatically when needed).
-
----
-
-### ⚙️ Configuration
-
-To publish configuration + stubs:
-
-```bash
-php artisan vendor:publish --tag=ddd-commands-config
-php artisan vendor:publish --tag=ddd-commands-stubs
-```
-
-This allows you to customize:
-- folder paths
-- namespace prefixes
-- stub templates
-- repository patterns
-- additional generators
-
----
-
 ### 🧪 Running Tests
 
 ```bash
@@ -177,7 +174,7 @@ GitHub Actions will upload coverage after each test run.
 - [x] DTO generator
 - [x] Action generator
 - [x] CQRS mode (command/query separation)
-- Repository implementation generator (Eloquent/Query Builder)
+- [ ] Repository implementation generator (Eloquent/Query Builder)
 
 ---
 
@@ -192,6 +189,12 @@ and consider [buying me a coffee](https://www.buymeacoffee.com/leodaido)! ☕️
 
 Pull requests are welcome. Please open an issue first for major changes.
 Make sure to update tests as needed.
+
+---
+
+### 📚 Changelog
+
+See [CHANGELOG.md](CHANGELOG.md)
 
 ---
 

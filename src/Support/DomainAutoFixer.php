@@ -47,8 +47,13 @@ class DomainAutoFixer
     public function __construct(string $domain)
     {
         $this->domain = Str::studly($domain);
-        $domainPath = config('ddd-commands.domain_path', 'app/Domain');
-        $this->basePath = base_path("{$domainPath}/{$this->domain}");
+
+        // Determine the base path based on environment
+        if (defined('DDD_TESTING_BASE_PATH')) {
+            $this->basePath = DDD_TESTING_BASE_PATH.'/app/Domains/'.$this->domain;
+        } else {
+            $this->basePath = base_path("app/Domains/{$this->domain}");
+        }
     }
 
     /**
