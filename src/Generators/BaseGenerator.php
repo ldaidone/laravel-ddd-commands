@@ -197,6 +197,6 @@ class BaseGenerator
     {
         $root = rtrim($this->rootNamespace(), '\\');
 
-        return $root.'\\Infrastructure\\Domains';
+        return $root.'\\Infrastructure';
     }
 }

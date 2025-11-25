@@ -45,7 +45,12 @@ abstract class GeneratorTestCase extends TestCase
 
     protected function cleanupTempDir()
     {
-        $tempPath = base_path('tests/temp');
+        if (defined('DDD_TESTING_BASE_PATH')) {
+            $tempPath = DDD_TESTING_BASE_PATH;
+        } else {
+            $tempPath = base_path('tests/temp');
+        }
+
         if (File::isDirectory($tempPath)) {
             File::deleteDirectory($tempPath);
         }

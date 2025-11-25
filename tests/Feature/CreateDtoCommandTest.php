@@ -15,7 +15,7 @@ class CreateDtoCommandTest extends GeneratorTestCase
         $this->assertTrue(File::exists($path), "DTO file was not created at {$path}");
 
         $content = File::get($path);
-        $this->assertStringContainsString('namespace Tests\Temp\Domains\Billing\DataTransferObjects;', $content);
+        $this->assertStringContainsString('namespace Tests\Temp\App\Domains\Billing\DataTransferObjects;', $content);
         $this->assertStringContainsString('class UserDto', $content);
     }
 }

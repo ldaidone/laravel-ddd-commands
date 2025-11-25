@@ -59,7 +59,7 @@ class RepositoryInterfaceGenerator extends BaseGenerator
 
         $this->path = $this->basePath($this->getDomainPath()."/{$this->domain}/Repositories/{$this->class}.php");
         $this->type = 'repository-interface';
-        $this->namespace = $this->rootNamespace()."\\{$this->domain}\\Repositories\\".$this->class;
+        $this->namespace = $this->rootNamespace()."{$this->domain}\\Repositories\\".$this->class;
 
         parent::__construct($this->path, $this->type);
     }

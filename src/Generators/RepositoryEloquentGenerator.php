@@ -55,7 +55,7 @@ class RepositoryEloquentGenerator extends BaseGenerator
      */
     public function __construct(string $name, string $interface)
     {
-        $this->rootNamespace = rtrim(app()->getNamespace(), '\\');
+        $this->rootNamespace = $this->getDomainNamespace();
 
         $parts = explode('/', $name);
 
@@ -63,7 +63,9 @@ class RepositoryEloquentGenerator extends BaseGenerator
         $this->entity = Str::studly(end($parts));
 
         $this->class = $this->entity.'EloquentRepository';
-        $this->interface = Str::studly($interface);
+
+        $ifaceArray = explode('/', Str::studly($interface));
+        $this->interface = end($ifaceArray);
 
         // Use configured infrastructure namespace
         $this->namespace = $this->getInfrastructureNamespace()."\\Database\\{$this->domain}\\Repositories";
