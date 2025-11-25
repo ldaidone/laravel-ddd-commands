@@ -2,8 +2,8 @@
 
 namespace {{ namespace }};
 
-use {{ rootNamespace }}Domain\{{ domain }}\Entities\{{ entity }};
-use {{ rootNamespace }}Domain\{{ domain }}\Repositories\{{ interface }};
+use {{ rootNamespace }}\{{ domain }}\Entities\{{ entity }};
+use {{ rootNamespace }}\{{ domain }}\Repositories\{{ interface }};
 
 class {{ class }} implements {{ interface }}
 {

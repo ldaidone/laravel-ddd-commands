@@ -4,7 +4,7 @@
 define('DDD_TESTING_BASE_PATH', basePath('tests/temp'));
 
 // Define what namespace generated classes should use during tests
-define('DDD_TESTING_NAMESPACE', 'Tests\\Temp\\');
+define('DDD_TESTING_NAMESPACE', 'Tests\\Temp\\App\\');
 
 // Clean test directory before each run
 if (is_dir(DDD_TESTING_BASE_PATH)) {
