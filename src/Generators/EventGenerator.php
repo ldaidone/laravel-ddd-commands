@@ -49,16 +49,16 @@ class EventGenerator extends BaseGenerator
      */
     public function __construct(string $name)
     {
-        $this->rootNamespace = $this->getDomainNamespace();
+        $this->rootNamespace = $this->rootNamespace();
 
         $parts = explode('/', $name);
 
         $this->domain = Str::studly($parts[0]);
         $this->entity = Str::studly(end($parts));
         $this->class = $this->entity;
-        $this->namespace = $this->rootNamespace.'\\'.$this->domain.'\\Events';
+        $this->namespace = $this->getDomainNamespace().'\\'.$this->domain.'\\Events';
 
-        $this->path = base_path($this->getDomainPath()."/{$this->domain}/Events/{$this->entity}.php");
+        $this->path = $this->basePath($this->getDomainPath()."/{$this->domain}/Events/{$this->entity}.php");
         $this->type = 'event';
 
         parent::__construct($this->path, $this->type);

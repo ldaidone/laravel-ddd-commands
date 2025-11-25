@@ -44,21 +44,34 @@ class BaseGenerator
      */
     public function __construct(string $path, string $type)
     {
-
         // Accept path as raw and untouched
-        $this->path = ucfirst($path);
+        $this->path = $path;
 
         // Type comes exactly as provided
         $this->type = $type;
 
         // Stub path matching the exact type name
-        $this->stubPath = __DIR__."/../../stubs/ddd/{$this->type}.stub";
+         $this->stubPath = __DIR__ . "/../../stubs/ddd/{$this->type}.stub";
 
-        // Check for published stub override
+        // allow override via published stub
         $publishedStub = resource_path("stubs/ddd-commands/{$this->type}.stub");
         if (File::exists($publishedStub)) {
             $this->stubPath = $publishedStub;
         }
+    }
+
+    protected function basePath(string $path): string
+    {
+        return defined('DDD_TESTING_BASE_PATH')
+            ? DDD_TESTING_BASE_PATH . '/' . $path     // used in tests
+            : base_path($path);               // used in real apps
+    }
+
+    protected function rootNamespace(): string
+    {
+        return defined('DDD_TESTING_NAMESPACE')
+            ? DDD_TESTING_NAMESPACE      // used in tests
+            : app()->getNamespace();     // used in real apps
     }
 
     /**
@@ -112,9 +125,11 @@ class BaseGenerator
             File::makeDirectory($dir, 0777, true);
         }
 
-        $stub = File::get($this->stubPath);
-
-        $contents = str_replace($tags, $replacements, $stub);
+        $contents = str_replace(
+            $tags,
+            $replacements,
+            File::get($this->stubPath),
+        );
 
         File::put($this->path, $contents);
 
@@ -128,7 +143,7 @@ class BaseGenerator
      */
     protected function getDomainPath(): string
     {
-        return config('ddd-commands.domain_path', 'app/Domain');
+        return 'app/Domains';
     }
 
     /**
@@ -138,7 +153,28 @@ class BaseGenerator
      */
     protected function getDomainNamespace(): string
     {
-        return config('ddd-commands.domain_namespace', 'App\Domain');
+        $root = rtrim($this->rootNamespace(), '\\');
+        return $root . '\\Domains';
+    }
+
+    /**
+     * Get the configured Application path from the package configuration.
+     *
+     * @return string The Application path, defaulting to 'app/Application'
+     */
+    protected function getApplicationPath(): string
+    {
+        return $this->basePath('app/Application');
+    }
+
+    /**
+     * Get the configured Application namespace from the package configuration.
+     *
+     * @return string The Application namespace, defaulting to 'App\Application'
+     */
+    protected function getApplicationNamespace(): string
+    {
+        return 'App\\Application';
     }
 
     /**
@@ -148,7 +184,7 @@ class BaseGenerator
      */
     protected function getInfrastructurePath(): string
     {
-        return config('ddd-commands.infrastructure_path', 'app/Infrastructure');
+        return 'app/Infrastructure';
     }
 
     /**
@@ -158,6 +194,7 @@ class BaseGenerator
      */
     protected function getInfrastructureNamespace(): string
     {
-        return config('ddd-commands.infrastructure_namespace', 'App\Infrastructure');
+        $root = rtrim($this->rootNamespace(), '\\');
+        return $root . '\\Infrastructure\\Domains';
     }
 }

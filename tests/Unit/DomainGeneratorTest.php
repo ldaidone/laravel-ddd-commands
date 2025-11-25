@@ -25,7 +25,7 @@ class DomainGeneratorTest extends GeneratorTestCase
         $domainPathProperty = $reflection->getProperty('domainPath');
         $domainPathProperty->setAccessible(true);
 
-        $expectedPath = app_path('Domain/TestDomain');
-        $this->assertStringContainsString('Domain/TestDomain', $domainPathProperty->getValue($generator));
+        $expectedPath = basePath('Domains/TestDomain');
+        $this->assertStringContainsString('Domains/TestDomain', $domainPathProperty->getValue($generator));
     }
 }
