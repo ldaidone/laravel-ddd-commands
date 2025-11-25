@@ -51,7 +51,7 @@ class BaseGenerator
         $this->type = $type;
 
         // Stub path matching the exact type name
-         $this->stubPath = __DIR__ . "/../../stubs/ddd/{$this->type}.stub";
+        $this->stubPath = __DIR__."/../../stubs/ddd/{$this->type}.stub";
 
         // allow override via published stub
         $publishedStub = resource_path("stubs/ddd-commands/{$this->type}.stub");
@@ -63,7 +63,7 @@ class BaseGenerator
     protected function basePath(string $path): string
     {
         return defined('DDD_TESTING_BASE_PATH')
-            ? DDD_TESTING_BASE_PATH . '/' . $path     // used in tests
+            ? DDD_TESTING_BASE_PATH.'/'.$path     // used in tests
             : base_path($path);               // used in real apps
     }
 
@@ -154,7 +154,8 @@ class BaseGenerator
     protected function getDomainNamespace(): string
     {
         $root = rtrim($this->rootNamespace(), '\\');
-        return $root . '\\Domains';
+
+        return $root.'\\Domains';
     }
 
     /**
@@ -195,6 +196,7 @@ class BaseGenerator
     protected function getInfrastructureNamespace(): string
     {
         $root = rtrim($this->rootNamespace(), '\\');
-        return $root . '\\Infrastructure\\Domains';
+
+        return $root.'\\Infrastructure\\Domains';
     }
 }
